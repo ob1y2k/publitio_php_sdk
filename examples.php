@@ -3,7 +3,7 @@ header('Content-type: text/plain; charset=utf-8');
 
 require_once('publito_api.php');
 // Please update xxxx with your key and yyyy with your secret
-$publito_api = new PublitoAPI('7320309c3f6c66fdabd263349a0f9348', '915c5b82c802ffdecb6a3f4526366271');
+$publito_api = new PublitoAPI('xxxx', 'yyyy');
 
 /*_________________________*/
 /* File Class             */
