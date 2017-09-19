@@ -1,17 +1,17 @@
 <?php
     /*-----------------------------------------------------------------------------
-     * PHP SDK for Publito API
+     * PHP SDK for Publitio API
      *
      * Author:      Divjak V.
-     * Copyright:   (c) 2017 Publito
+     * Copyright:   (c) Publitio https://publit.io/
      * Version:     1.0     
      *     
      *-----------------------------------------------------------------------------
      */
 
-    class PublitoAPI {
+    class PublitioAPI {
         private $_version = '1.0';
-        private $_url = 'http://api.publito.com/v1';
+        private $_url = 'http://api.publit.io/v1';
         private $_library;
 
         private $_key, $_secret;
