@@ -1,7 +1,7 @@
 <?php
 header('Content-type: text/plain; charset=utf-8');
 
-require_once('publitio_api.php');
+require_once('publitio_api.php'); 
 // Please update xxxx with your key and yyyy with your secret
 $publitio_api = new PublitioAPI('xxxx', 'yyyy');
 

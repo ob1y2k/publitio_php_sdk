@@ -3,7 +3,7 @@
      * PHP SDK for Publitio API
      *
      * Author:      Divjak V.
-     * Copyright:   (c) Publitio https://publit.io/
+     * Copyright:   (c) Publitio https://publit.io/ 
      * Version:     1.0     
      *     
      *-----------------------------------------------------------------------------
