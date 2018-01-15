@@ -39,7 +39,7 @@ $response = $publitio_api->call("/files/list", "GET", array('offset' => '0', 'li
 #$response = $publitio_api->call("/players/list", "GET");
 
 // create player
-#$response = $publitio_api->call("/players/create", "POST", array('name' => 'fliiby2', 'adtag_id' => 'myoverlay')); 
+#$response = $publitio_api->call("/players/create", "POST", array('name' => 'myplayer', 'adtag_id' => 'myoverlay')); 
 
 // show player with id myplayer
 #$response = $publitio_api->call("/players/show/myplayer", "GET"); 
