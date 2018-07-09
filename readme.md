@@ -1,6 +1,6 @@
 # Publitio PHP SDK
 
-Simple PHP SDK for Publitio API
+Simple PHP SDK for Publitio API. This SDK works OK with older versions of PHP (5.4+)
 
 ## Installation
 

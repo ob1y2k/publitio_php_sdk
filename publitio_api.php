@@ -1,18 +1,14 @@
 <?php
-    /*
-     * -----------------------------------------------------------------------------
+    /*-----------------------------------------------------------------------------
      * PHP SDK for Publitio API
      *
      * Author:      Divjak V.
-     * Copyright:   (c) Publitio https://publit.io/
-     * Version:     1.0
-     *
+     * Copyright:   (c) Publitio https://publit.io/ 
+     * Version:     1.0     
+     *     
      *-----------------------------------------------------------------------------
      */
 
-    /**
-     * Class PublitioAPI
-     */
     class PublitioAPI {
         /**
          * @var string $_version
@@ -41,8 +37,7 @@
          * @param string $key
          * @param string $secret
          */
-        public function __construct(string $key, string $secret)
-        {
+        public function __construct($key, $secret) {
             $this->_key = $key;
             $this->_secret = $secret;
 
@@ -58,8 +53,7 @@
         /**
          * @return string
          */
-        public function version(): string
-        {
+        public function version() {
             return $this->_version;
         }
 
@@ -74,17 +68,14 @@
          *
          * @return array|string
          */
-        private function _urlencode($input)
-        {
+        private function _urlencode($input) {
             if (is_array($input)) {
                 return array_map(array('_urlencode'), $input);
+            } else if (is_scalar($input)) {
+                return str_replace('+', ' ', str_replace('%7E', '~', rawurlencode($input)));
+            } else {
+                return '';
             }
-
-            if (is_scalar($input)) {
-                return str_replace(array('%7E', '+'), array('~', ' '), rawurlencode($input));
-            }
-
-            return '';
         }
 
         /**
@@ -94,20 +85,21 @@
          *
          * @return string
          */
-        private function _sign(array $args): string
-        {
+        private function _sign($args) {
             ksort($args);
-            $sbs = '';
+            $sbs = "";
             foreach ($args as $key => $value) {
-                if ($sbs !== '') {
-                    $sbs .= '&';
+                if ($sbs != "") {
+                    $sbs .= "&";
                 }
                 // Construct Signature Base String
-                $sbs .= $this->_urlencode($key) . '=' . $this->_urlencode($value);
+                $sbs .= $this->_urlencode($key) . "=" . $this->_urlencode($value);
             }
 
             // Add shared secret to the Signature Base String and generate the signature
-            return sha1($sbs . $this->_secret);
+            $signature = sha1($sbs . $this->_secret);
+
+            return $signature;
         }
 
         /**
@@ -119,9 +111,9 @@
          *
          * @throws Exception
          */
-        private function _args(array $args): array
-        {
-            $args['api_nonce'] = str_pad(random_int(0, 99999999), 8, STR_PAD_LEFT);
+        private function _args($args) {
+            
+            $args['api_nonce'] = str_pad(mt_rand(0, 99999999), 8, STR_PAD_LEFT);
             $args['api_timestamp'] = time();
             $args['api_key'] = $this->_key;
 
@@ -151,9 +143,8 @@
          *
          * @throws Exception
          */
-        public function call_url(string $call, array $args = []): string
-        {
-            $url = $this->_url . $call . '?' . http_build_query($this->_args($args), '', '&');
+        public function call_url($call, $args=array()) {
+            $url = $this->_url . $call . '?' . http_build_query($this->_args($args), "", "&");
             return $url;
         }
 
@@ -168,33 +159,38 @@
          *
          * @throws Exception
          */
-        public function call(string $call, string $method = 'GET', array $args = [])
-        {
+        public function call($call, $method = "GET", $args=array()) {
             $url = $this->call_url($call, $args);
 
+            #die($url);
+
             $response = null;
-            if ($this->_library === 'curl') {
-                $curl = curl_init();
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                if ($method === 'PUT') {
-                    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PUT');
-                } else if ($method === 'DELETE') {
-                    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'DELETE');
-                } else if ($method === 'POST') {
-                    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
-                }
-                curl_setopt($curl, CURLOPT_URL, $url);
-                $response = curl_exec($curl);
-                curl_close($curl);
-            } else if ($method === 'GET') {
-                $response = file_get_contents($url);
-            } else {
-                $response = 'Error: No cURL library';
+            switch($this->_library) {
+                case 'curl':
+                    $curl = curl_init();
+                    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);                    
+                    if($method == "PUT") {                   
+                        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
+                    } else if($method == "DELETE") {                   
+                        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "DELETE");
+                    } else if ($method == "POST") {                   
+                        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+                    } 
+                    curl_setopt($curl, CURLOPT_URL, $url);
+                    $response = curl_exec($curl);
+                    curl_close($curl);
+                    break;
+                default:
+                    if($method == "GET") 
+                        $response = file_get_contents($url);
+                    else
+                        $response = "Error: No cURL library";
+
             }
 
             $unserialized_response = @unserialize($response);
 
-            return $unserialized_response ?: $response;
+            return $unserialized_response ? $unserialized_response : $response;
         }
 
         /**
@@ -208,15 +204,13 @@
          *
          * @throws Exception
          */
-        public function upload_file(string $file_path, string $action = 'file', array $args = []): ?string
-        {
-
-            if ($action === 'file') {
-                $url = $this->call_url('/files/create', $args);
-            }
-            else if ($action === 'watermark') {
-                $url = $this->call_url('/watermarks/create', $args);
-            }
+        public function upload_file($file_path, $action = "file", $args=array()) {
+            
+            if ($action=="file")
+            $url = $this->call_url('/files/create', $args);
+            else if ($action=="watermark")
+            $url = $this->call_url('/watermarks/create', $args);
+            #die($url);
 
             // A new variable included with curl in PHP 5.5 - CURLOPT_SAFE_UPLOAD - prevents the
             // '@' modifier from working for security reasons (in PHP 5.6, the default value is true)
@@ -224,31 +218,33 @@
             // http://php.net/manual/en/migration56.changed-functions.php
             // http://comments.gmane.org/gmane.comp.php.devel/87521
             if (!defined('PHP_VERSION_ID') || PHP_VERSION_ID < 50500) {
-              $post_data = array('file' => '@' . $file_path);
+              $post_data = array("file"=>"@" . $file_path);
             } else {
-              $post_data = array('file' => new \CURLFile($file_path));
+              $post_data = array("file"=>new \CURLFile($file_path));
             }
             $response = null;
 
-            $i = $this->_library;
-            if ($i === 'curl') {
-                $curl = curl_init();
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($curl, CURLOPT_URL, $url);
-                curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
-                $response = curl_exec($curl);
-                $err_no = curl_errno($curl);
-                $err_msg = curl_error($curl);
-                curl_close($curl);
-            } else {
-                $response = 'Error: No cURL library';
-            }
+            switch($this->_library) {
+                case 'curl':
+                    $curl = curl_init();
+                    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+                    curl_setopt($curl, CURLOPT_URL, $url);
+                    curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
+                    $response = curl_exec($curl);
+                    $err_no = curl_errno($curl);
+                    $err_msg = curl_error($curl);
+                    curl_close($curl);
+                    break;
+                default:
+                    $response = "Error: No cURL library";
+            }            
 
-            if ($err_no === 0) {
+            if ($err_no == 0) {
                 return $response;
+            } else {
+                return "Error #" . $err_no . ": " . $err_msg;
             }
-
-            return 'Error #' . $err_no . ': ' . ($err_msg ?? '');
         }
+        
     }
-
+?>
