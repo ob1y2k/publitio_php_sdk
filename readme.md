@@ -2,6 +2,11 @@
 
 Simple PHP SDK for Publitio API
 
+# Supported PHP version(s)
+**Version 1.x :** PHP 5.6 and lower
+
+**Version 2.x :** PHP 7 and higher
+
 ## Installation
 
 Just include publitio_api.php in your project and initiate it 
