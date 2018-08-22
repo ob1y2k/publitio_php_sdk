@@ -17,7 +17,7 @@ $response = $publitio_api->call("/files/list", "GET", array('offset' => '0', 'li
 // create (upload) local file, all options
 #$response = $publitio_api->upload_file("samples/monkey.jpg", "file", array('title' => 'zzz', 'description' => 'yyyyyy', 'tags' => 'tag1 tag2', 'privacy' => '1', 'option_download' => '1', 'option_ad' => '1')); 
 
-// create (upload) remote file
+// create (upload) remote file 
 #$response = $publitio_api->call("/files/create", "POST", array('file_url' => 'http://keepdsmile.com/publitio/espreso/rasa1.jpg')); 
 
 // show file with id 23dyM408
