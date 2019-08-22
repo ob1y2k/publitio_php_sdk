@@ -1,0 +1,11 @@
+{
+    "name": "publitio/publitio",
+    "description": "PHP language interface for the Publitio RESTful API",
+    "keywords": ["publitio"],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "Publitio\\": "src/"
+    }
+}
