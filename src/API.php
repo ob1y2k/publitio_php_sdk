@@ -15,7 +15,7 @@ class API
 
     private static function getNonce()
     {
-        return random_int(10000000, 99999999);
+        return \random_int(10000000, 99999999);
     }
 
     private static function getTimestamp()
