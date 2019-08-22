@@ -1,13 +1,15 @@
 <?php
 namespace Publitio;
 
+require_once __DIR__ . '/random_compat-2.0.18/lib/random.php';
+
 /**
  * API presents the main interface to the Publitio RESTful API.
  * You can find more documentation about Publitio at https://publit.io/docs.
  */
 class API
 {
-    public $VERSION = '2.0.0';
+    public static $VERSION = '2.0.0';
 
     private $key;
     private $secret;

@@ -1,27 +1,23 @@
 # Publitio PHP SDK
 
-Simple PHP SDK for Publitio API. This SDK works OK with older versions of PHP (5.4+)
+PHP SDK for Publitio API. This SDK works with PHP version 5.5 and up.
+
+## Deprecated version
+
+On a separate branch.
 
 ## Installation
 
-Just include publitio_api.php in your project and initiate it 
+Via Composer.
+
+## Documentation
+
+From doxygen comments.
+
+## Examples
 
 ```php
-require_once('publitio_api.php'); 
-// Please update xxxx with your key and yyyy with your secret
-$publitio_api = new PublitioAPI('xxxx', 'yyyy');
+$publitio = new \Publitio\API('<API Key>', '<API secret>');
+$response = $publitio->call("/files/list", "GET", array('offset' => '0', 'limit' => '10'));
+var_dump($response);
 ```
-
-See examples.php file for full list of available classes, methods and options
-
-Sample call to List Files
-
-```php
-// list files
-$response = $publitio_api->call("/files/list", "GET", array('offset' => '0', 'limit' => '10'));
-
-//echo entire response
-print_r($response);
-```
-
-

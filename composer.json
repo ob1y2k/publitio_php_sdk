@@ -4,7 +4,6 @@
     "keywords": ["publitio"],
     "require": {
         "guzzlehttp/guzzle": "^6.3",
-        "paragonie/random_compat": ">=2"
     },
     "autoload": {
         "psr-4": {
