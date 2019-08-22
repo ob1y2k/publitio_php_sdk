@@ -56,6 +56,25 @@ class API
     }
 
     /**
+     * Adds the standard API query arguments to $args.
+     * These are the arguments that must be present in each Publitio API call,
+     * like api_key and api_signature.
+     *
+     * @param array $args User's query arguments.
+     */
+    private function addApiArgs(&$args)
+    {
+        $timestamp = self::getTimestamp();
+        $nonce = self::getNonce();
+        $signature = $this->getSignature($timestamp, $nonce);
+        $args['api_key'] = $this->key;
+        $args['api_timestamp'] = $timestamp;
+        $args['api_nonce'] = $nonce;
+        $args['api_signature'] = $signature;
+        $args['api_kit'] = self::getKit();
+    }
+
+    /**
      * Make an API call. For a list of avaliable calls, see https://publit.io/docs.
      * Use this method when you aren't going to be uploading any files with the call.
      * If you wish to upload file, use the uploadFile or uploadRemoteFile methods.
@@ -70,15 +89,8 @@ class API
      */
     public function call($url, $method = 'GET', $args = array())
     {
-        $timestamp = self::getTimestamp();
-        $nonce = self::getNonce();
-        $signature = $this->getSignature($timestamp, $nonce);
-        $args['api_key'] = $this->key;
-        $args['api_timestamp'] = $timestamp;
-        $args['api_nonce'] = $nonce;
-        $args['api_signature'] = $signature;
+        $this->addApiArgs($args);
         $url = self::addQueryArgs($url, $args);
-        
         $res = $this->client->request($method, $url);
 
         if (!in_array($res->getStatusCode(), self::KNOWN_STATUS_CODES)) {
