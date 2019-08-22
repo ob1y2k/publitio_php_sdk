@@ -9,7 +9,7 @@ class API
 {
     public const VERSION = '2.0.0';
 
-    private const KNOWN_STATUS_CODES = array(400, 401, 402, 403, 404, 405, 406, 410, 429, 500, 503);
+    private const KNOWN_STATUS_CODES = array(200, 400, 401, 402, 403, 404, 405, 406, 410, 429, 500, 503);
 
     private $key;
     private $secret;
@@ -25,7 +25,7 @@ class API
     {
         $this->key = $key;
         $this->secret = $secret;
-        $this->client = new GuzzleHttp\Client(array(
+        $this->client = new \GuzzleHttp\Client(array(
             'base_uri' => 'http://api.publit.io/v1/'
         ));
     }
@@ -79,10 +79,10 @@ class API
         $args['api_signature'] = $signature;
         $url = self::addQueryArgs($url, $args);
         
-        $res = $this->client->request(method, $url);
+        $res = $this->client->request($method, $url);
 
         if (!in_array($res->getStatusCode(), self::KNOWN_STATUS_CODES)) {
-            throw new Exception("Unfamiliar status code {$res->getStatusCode()}");
+            throw new \Exception("Unfamiliar status code {$res->getStatusCode()}");
         }
 
         return json_decode($res->getBody());
