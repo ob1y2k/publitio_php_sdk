@@ -7,7 +7,7 @@ namespace Publitio;
  */
 class API
 {
-    public const VERSION = '2.0.0';
+    public $VERSION = '2.0.0';
 
     private $key;
     private $secret;
@@ -25,7 +25,7 @@ class API
 
     private static function getKit()
     {
-        return "php-" . self::VERSION;
+        return "php-" . self::$VERSION;
     }
 
     private static function addQuery($url, $args)
