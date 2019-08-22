@@ -6,6 +6,8 @@
         "guzzlehttp/guzzle": "^6.3"
     },
     "autoload": {
-        "Publitio\\": "src/"
+        "psr-4": {
+            "Publitio\\": "src/"
+        }
     }
 }

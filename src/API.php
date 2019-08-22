@@ -58,17 +58,14 @@ class API
     /**
      * Make an API call. For a list of avaliable calls, see https://publit.io/docs.
      * Use this method when you aren't going to be uploading any files with the call.
-     * If you wish to upload file, use the @ref uploadFile "uploadFile" or
-     * @ref uploadRemoteFile "uploadRemoteFile" methods.
+     * If you wish to upload file, use the uploadFile or uploadRemoteFile methods.
      *
      * @param string $url The API URL, for example '/files/list'.
      * @param string $method The HTTP method, for example 'GET' or 'DELETE'.
      *                       Which of these you need depends on what kind of call you are making.
      *                       The method for each API URL is documented at https://publit.io/docs.
      * @param array $args The URL query parameters.
-     *
      * @return object
-     *
      * @throws Exception
      */
     public function call($url, $method = 'GET', $args = array())
