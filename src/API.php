@@ -4,7 +4,8 @@ namespace Publitio;
 require_once __DIR__ . '/random_compat-2.0.18/lib/random.php';
 
 /**
- * API presents the main interface to the Publitio RESTful API.
+ * @brief API presents the main interface to the Publitio RESTful API.
+ *
  * You can find more documentation about Publitio at https://publit.io/docs.
  */
 class API
@@ -106,10 +107,10 @@ class API
      *                       Which of these you need depends on what kind of call you are making.
      *                       The method for each API URL is documented at https://publit.io/docs.
      * @param array $args The URL query parameters.
-     * @return object The response JSON parsed using json_decode($response_body).
-     * @throws Publitio\BadJSONResponse when the server returns an invalid JSON reponse.
-     *         Note: if the server is returning an invalid JSON response it is likely
-     *         that $call_url is invalid, or perhaps there is an internal server error.
+     * @return object The response JSON parsed using json_decode.
+     * @throws BadJSONResponse when the server returns an invalid JSON reponse.
+     *                         Note: if the server is returning an invalid JSON response it is likely
+     *                         that $call_url is invalid, or perhaps there is an internal server error.
      */
     public function call($call_url, $method = 'GET', $args = array())
     {
@@ -140,8 +141,8 @@ class API
      * @param array $args The URL query parameters.
      * @return object The response JSON parsed using json_decode($response_body).
      * @throws Exception when $action is invalid.
-     * @throws Publitio\BadJSONResponse when the server responds with invalid JSON. This
-     *                                  might be due to an internal server error.
+     * @throws BadJSONResponse when the server responds with invalid JSON. This
+     *                         might be due to an internal server error.
      */
     public function uploadFile($file, $action = 'file', $args = array())
     {
@@ -176,8 +177,8 @@ class API
      * @param array $args The URL query parameters.
      * @return object The response JSON parsed using json_decode($response_body).
      * @throws Exception when $action is invalid.
-     * @throws Publitio\BadJSONResponse when the server responds with invalid JSON. This
-     *                                  might be due to an internal server error.
+     * @throws BadJSONResponse when the server responds with invalid JSON. This
+     *                         might be due to an internal server error.
      */
     public function uploadRemoteFile($remote_url, $action = 'file', $args = array())
     {
