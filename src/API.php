@@ -4,7 +4,7 @@ namespace Publitio;
 require_once __DIR__ . '/random_compat-2.0.18/lib/random.php';
 
 /**
- * @brief API presents the main interface to the Publitio RESTful API.
+ * @brief API presents the main interface to the Publitio RESTful %API.
  *
  * You can find more documentation about Publitio at https://publit.io/docs.
  */
@@ -49,9 +49,9 @@ class API
     }
 
     /**
-     * @param string $key Your API key. You can find your API
+     * @param string $key Your %API key. You can find your %API
      *                    key on your Publitio dashboard at https://publit.io/dashboard.
-     * @param string $secret Your API secret. You can find your API
+     * @param string $secret Your %API secret. You can find your %API
      *                       secret on your Publitio dashboard at https://publit.io/dashboard.
      */
     public function __construct($key, $secret)
@@ -98,14 +98,14 @@ class API
     }
 
     /**
-     * Make an API call. For a list of avaliable calls, see https://publit.io/docs.
+     * Make an %API call. For a list of avaliable calls, see https://publit.io/docs.
      * Use this method when you aren't going to be uploading any files with the call.
-     * If you wish to upload file, use the uploadFile or uploadRemoteFile methods.
+     * If you wish to upload a file, use the uploadFile or uploadRemoteFile methods.
      *
-     * @param string $call_url The API call URL, for example '/files/list'.
+     * @param string $call_url The %API call endpoint, for example '/files/list'.
      * @param string $method The HTTP method, for example 'GET' or 'DELETE'.
      *                       Which of these you need depends on what kind of call you are making.
-     *                       The method for each API URL is documented at https://publit.io/docs.
+     *                       The method for each %API URL is documented at https://publit.io/docs.
      * @param array $args The URL query parameters.
      * @return object The response JSON parsed using json_decode.
      * @throws BadJSONResponse when the server returns an invalid JSON reponse.
@@ -131,8 +131,8 @@ class API
      * use uploadRemoteFile.
      *
      * @param mixed $file Pass a string to upload the contents of the string, pass an fopen resource
-     *                    to upload the contents of a PHP stream, or pass a Psr\Http\Message\StreamInterface to
-     *                    upload the contents of a PSR-7 stream.
+     *                    to upload the contents of a PHP stream, or pass a Psr\\Http\\Message\\StreamInterface
+     *                    to upload the contents of a PSR-7 stream.
      * @param string $action Can be 'file' or 'watermark'. If $action is 'file',
      *                       this method will upload a file to the Publitio server.
      *                       If $action is 'watermark', this method will upload a

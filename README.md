@@ -45,33 +45,40 @@ $publitio = new \Publitio\API('<API Key>', '<API Secret>');
 To Make an API call, use the `call` method:
 
 ```php
-$response = publitio->call($call_url, $method, $args);
+$response = $publitio->call($call_url, $method, $args);
 ```
 
 For a list of avaliable calls, see [the docs](https://publit.io/docs).
 
-$call_url The API call URL, for example '/files/list'.
+- $call_url is the API call URL, for example '/files/list'.
 
-$method is the HTTP method, for example 'GET' or 'DELETE'.
+- $method is the HTTP method, for example 'GET' or 'DELETE'.
 Which of these you need depends on what kind of call you are making.
 The method for each API URL is documented at [the docs](https://publit.io/docs).
 
-$args is an array of URL query parameters, such as `array('public_id' => 'foo')`.
+- $args is an array of URL query parameters, such as `array('public_id' => 'foo')`.
 
-$response will be the response JSON parsed using `json_decode`.
+- $response will be the response JSON parsed using `json_decode`.
 Note: this is a PHP object, not an array.
 
 Use the `call` method when you aren't going to be uploading any files with the call.
-If you wish to upload file, use the uploadFile or uploadRemoteFile methods:
+If you wish to upload a file, use the uploadFile or uploadRemoteFile methods:
 
 ```php
 $publitio->uploadFile(fopen('path/to/file.png', 'r'));
 ```
 
-## Examples
+## Documentation
+
+Doxygen github page.
+
+## Example
+
+For plenty more usage examples, see the
+[examples](https://github.com/ob1y2k/publitio_php_sdk/tree/master/examples) directory.
 
 ```php
 $publitio = new \Publitio\API('<API Key>', '<API secret>');
-$response = $publitio->call("/files/list", "GET", array('offset' => '0', 'limit' => '10'));
+$response = $publitio->call('/files/list', 'GET', array('offset' => '0', 'limit' => '10'));
 var_dump($response);
 ```
