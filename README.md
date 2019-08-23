@@ -70,7 +70,8 @@ $publitio->uploadFile(fopen('path/to/file.png', 'r'));
 
 ## Documentation
 
-Doxygen github page.
+For complete documentation of this SDK,
+see [this page](https://ob1y2k.github.io/publitio_php_sdk/html/annotated.html).
 
 ## Example
 
