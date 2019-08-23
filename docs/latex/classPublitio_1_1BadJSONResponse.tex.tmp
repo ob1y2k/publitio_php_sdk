@@ -24,7 +24,7 @@ Collaboration diagram for Publitio\textbackslash{}Bad\+J\+S\+O\+N\+Response\+:
 \subsection{Detailed Description}
 This exception is thrown when the server responds with incorrectly formatted J\+S\+ON. 
 
-This also happens then the server responds with something that isn\textquotesingle{}t J\+S\+ON at all, such as H\+T\+ML code. This can happen when you use a nonexistent \hyperlink{classPublitio_1_1API}{A\+PI} endpoint (for example, a typo -\/ \textquotesingle{}flies/list\textquotesingle{} instead of \textquotesingle{}files/list\textquotesingle{}). This may also happen if an internal server error occurs. 
+This also happens then the server responds with something that isn\textquotesingle{}t J\+S\+ON at all, such as H\+T\+ML code. This can happen when you use a nonexistent A\+PI endpoint (for example, a typo -\/ \textquotesingle{}flies/list\textquotesingle{} instead of \textquotesingle{}files/list\textquotesingle{}). This may also happen if an internal server error occurs. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
