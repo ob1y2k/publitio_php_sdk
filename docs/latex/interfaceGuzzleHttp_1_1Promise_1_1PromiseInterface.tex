@@ -1,0 +1,194 @@
+\hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface}{}\section{Guzzle\+Http\textbackslash{}Promise\textbackslash{}Promise\+Interface Interface Reference}
+\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface}\index{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface@{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Promise\textbackslash{}Promise\+Interface\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a2f1174c4a67f1b7fb1a74d37466bc90a}{then} (callable \$on\+Fulfilled=null, callable \$on\+Rejected=null)
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a4a7334842850943b3dd2fdd8ec23943b}{otherwise} (callable \$on\+Rejected)
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a4473485faedc0b6489ff28b4fbdc2330}{get\+State} ()
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_ae39a5f1a81903f74af5114c272bf7b7b}{resolve} (\$value)
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a6c34789baeca75bd8c4fb4acf4999f78}{reject} (\$reason)
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_ab3f2eb63d775492446ab3784618aeef8}{cancel} ()
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_ad7f8dc7f9513af40c61a985ad89b6219}{wait} (\$unwrap=true)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a29788ca20032af9f73bad5556c01f68c}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a29788ca20032af9f73bad5556c01f68c}} 
+const {\bfseries P\+E\+N\+D\+I\+NG} = \textquotesingle{}pending\textquotesingle{}
+\item 
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a817e46b9f4a975e708cf9bc0feab7956}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a817e46b9f4a975e708cf9bc0feab7956}} 
+const {\bfseries F\+U\+L\+F\+I\+L\+L\+ED} = \textquotesingle{}fulfilled\textquotesingle{}
+\item 
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a04dcd1653d073ab0e1a7e8006d0930f2}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a04dcd1653d073ab0e1a7e8006d0930f2}} 
+const {\bfseries R\+E\+J\+E\+C\+T\+ED} = \textquotesingle{}rejected\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A promise represents the eventual result of an asynchronous operation.
+
+The primary way of interacting with a promise is through its then method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.
+
+\hyperlink{}{https\+://promisesaplus.\+com/}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_ab3f2eb63d775492446ab3784618aeef8}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_ab3f2eb63d775492446ab3784618aeef8}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}!cancel@{cancel}}
+\index{cancel@{cancel}!Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}}
+\subsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\+::cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cancels the promise if possible.
+
+\hyperlink{}{https\+://github.\+com/promises-\/aplus/cancellation-\/spec/issues/7}
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Promise_1_1Coroutine_a7c999f58d48a3678a4e86b1796232649}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Coroutine}, \hyperlink{classGuzzleHttp_1_1Promise_1_1Promise_a5e84ab7b355948f9e5ce0ee5ae76d864}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise}, \hyperlink{classGuzzleHttp_1_1Promise_1_1RejectedPromise_a57da0985dd2da478314844a4a1b7d781}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Rejected\+Promise}, and \hyperlink{classGuzzleHttp_1_1Promise_1_1FulfilledPromise_a2a1ed3ce2a277fef457c47e347ce3b8a}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Fulfilled\+Promise}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a4473485faedc0b6489ff28b4fbdc2330}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a4473485faedc0b6489ff28b4fbdc2330}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}}
+\subsubsection{\texorpdfstring{get\+State()}{getState()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the state of the promise (\char`\"{}pending\char`\"{}, \char`\"{}rejected\char`\"{}, or \char`\"{}fulfilled\char`\"{}).
+
+The three states can be checked against the constants defined on \hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface}{Promise\+Interface}\+: P\+E\+N\+D\+I\+NG, F\+U\+L\+F\+I\+L\+L\+ED, and R\+E\+J\+E\+C\+T\+ED.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Promise_1_1Coroutine_a67968b964dd78cde69e69267f2f6bc8e}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Coroutine}, \hyperlink{classGuzzleHttp_1_1Promise_1_1Promise_a598a43e196fc3fd6445a9ca5e5b974f3}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise}, \hyperlink{classGuzzleHttp_1_1Promise_1_1RejectedPromise_a335b97e19692bbbba3718d892d335dd9}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Rejected\+Promise}, and \hyperlink{classGuzzleHttp_1_1Promise_1_1FulfilledPromise_a573e5b00f2e5a280190d101a128a4748}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Fulfilled\+Promise}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a4a7334842850943b3dd2fdd8ec23943b}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a4a7334842850943b3dd2fdd8ec23943b}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}!otherwise@{otherwise}}
+\index{otherwise@{otherwise}!Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}}
+\subsubsection{\texorpdfstring{otherwise()}{otherwise()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\+::otherwise (\begin{DoxyParamCaption}\item[{callable}]{\$on\+Rejected }\end{DoxyParamCaption})}
+
+Appends a rejection handler callback to the promise, and returns a new promise resolving to the return value of the callback if it is called, or to its original fulfillment value if the promise is instead fulfilled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$on\+Rejected} & Invoked when the promise is rejected.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface}{Promise\+Interface} 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Promise_1_1Coroutine_adc412e8e82fa6fdee4649b8554452319}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Coroutine}, \hyperlink{classGuzzleHttp_1_1Promise_1_1Promise_a16b5c01afbddded8703161ec2f6694ad}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise}, \hyperlink{classGuzzleHttp_1_1Promise_1_1RejectedPromise_a83b4819e3244c3f0ee82c636b54bb99c}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Rejected\+Promise}, and \hyperlink{classGuzzleHttp_1_1Promise_1_1FulfilledPromise_a15a81208044c38ea1d3128094431cf7f}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Fulfilled\+Promise}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a6c34789baeca75bd8c4fb4acf4999f78}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a6c34789baeca75bd8c4fb4acf4999f78}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}!reject@{reject}}
+\index{reject@{reject}!Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}}
+\subsubsection{\texorpdfstring{reject()}{reject()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\+::reject (\begin{DoxyParamCaption}\item[{}]{\$reason }\end{DoxyParamCaption})}
+
+Reject the promise with the given reason.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$reason} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Promise_1_1Promise_af081d064b1d12bd61025907c94e7b4dd}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise}, \hyperlink{classGuzzleHttp_1_1Promise_1_1Coroutine_ad4894b8de07e0e279a475a309ca698e3}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Coroutine}, \hyperlink{classGuzzleHttp_1_1Promise_1_1RejectedPromise_a6890810c39d795507fef5d8be1a4d60d}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Rejected\+Promise}, and \hyperlink{classGuzzleHttp_1_1Promise_1_1FulfilledPromise_ade4ba1e0f6c27517479dc427372c2290}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Fulfilled\+Promise}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_ae39a5f1a81903f74af5114c272bf7b7b}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_ae39a5f1a81903f74af5114c272bf7b7b}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}!resolve@{resolve}}
+\index{resolve@{resolve}!Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}}
+\subsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\+::resolve (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Resolve the promise with the given value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Promise_1_1Promise_ac36ed471a473ef124c4561d8351d39fb}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise}, \hyperlink{classGuzzleHttp_1_1Promise_1_1Coroutine_a3af6486dd13c854b6598c7806addf87d}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Coroutine}, \hyperlink{classGuzzleHttp_1_1Promise_1_1RejectedPromise_a7ae165802820c8c9afa1d4d2697c3c58}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Rejected\+Promise}, and \hyperlink{classGuzzleHttp_1_1Promise_1_1FulfilledPromise_aa4e349787515ae99e597a91f7f7e5dbe}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Fulfilled\+Promise}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a2f1174c4a67f1b7fb1a74d37466bc90a}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_a2f1174c4a67f1b7fb1a74d37466bc90a}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}!then@{then}}
+\index{then@{then}!Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}}
+\subsubsection{\texorpdfstring{then()}{then()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\+::then (\begin{DoxyParamCaption}\item[{callable}]{\$on\+Fulfilled = {\ttfamily null},  }\item[{callable}]{\$on\+Rejected = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Appends fulfillment and rejection handlers to the promise, and returns a new promise resolving to the return value of the called handler.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$on\+Fulfilled} & Invoked when the promise fulfills. \\
+\hline
+callable & {\em \$on\+Rejected} & Invoked when the promise is rejected.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface}{Promise\+Interface} 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Promise_1_1Coroutine_a11783468845f704928e1ba13a63534e8}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Coroutine}, \hyperlink{classGuzzleHttp_1_1Promise_1_1Promise_a3f45723dce9315b6dcc5639f897c77b3}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise}, \hyperlink{classGuzzleHttp_1_1Promise_1_1FulfilledPromise_aecac67e3bd3294aae15a10748b81c155}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Fulfilled\+Promise}, and \hyperlink{classGuzzleHttp_1_1Promise_1_1RejectedPromise_a2b91783cd3388e3aa66d0902c3cf4c49}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Rejected\+Promise}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_ad7f8dc7f9513af40c61a985ad89b6219}\label{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface_ad7f8dc7f9513af40c61a985ad89b6219}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}!wait@{wait}}
+\index{wait@{wait}!Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Promise\+Interface}}
+\subsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\+::wait (\begin{DoxyParamCaption}\item[{}]{\$unwrap = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Waits until the promise completes if possible.
+
+Pass \$unwrap as true to unwrap the result of the promise, either returning the resolved value or throwing the rejected exception.
+
+If the promise cannot be waited on, then the promise will be rejected.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$unwrap} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Promise_1_1Coroutine_ae227b3f676a5ef659ffba497e432cc1b}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Coroutine}, and \hyperlink{classGuzzleHttp_1_1Promise_1_1Promise_abada4a05cb1b6e162db6567872415dad}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promise}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/promises/src/Promise\+Interface.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,215 @@
+\hypertarget{classGuzzleHttp_1_1HandlerStack}{}\section{Guzzle\+Http\textbackslash{}Handler\+Stack Class Reference}
+\label{classGuzzleHttp_1_1HandlerStack}\index{Guzzle\+Http\textbackslash{}\+Handler\+Stack@{Guzzle\+Http\textbackslash{}\+Handler\+Stack}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_acd991cc07f50dbb5ca301f703c11338f}{\+\_\+\+\_\+construct} (callable \$handler=null)
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_a96c996cb646ff14c1e9302ffed3dde54}{\+\_\+\+\_\+invoke} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$request, array \$options)
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_a1e3074138c9cbfe2ab5ae3a35b6581d0}{\+\_\+\+\_\+to\+String} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_abe01e072281e5c70dbb03db23bde22f0}{set\+Handler} (callable \$handler)
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_ae0f44f5088fb05b053a56fe84f264637}{has\+Handler} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_a545c84f9b80b8a4b66ff845c45484808}{unshift} (callable \$middleware, \$name=null)
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_a035eb8174a7cf962fe6064f5dda2a61e}{push} (callable \$middleware, \$name=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_aeca62dd3e371afcbd54d7e0d90897051}{before} (\$find\+Name, callable \$middleware, \$with\+Name=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_a7c217d7774bc2e0fa9d9f3e9502b7cd2}{after} (\$find\+Name, callable \$middleware, \$with\+Name=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_a54107f838fb918ab3f1a017007a635ab}{remove} (\$remove)
+\item 
+\hyperlink{classGuzzleHttp_1_1HandlerStack_a6b8ed28dc14bef746d5a11e536d0f929}{resolve} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGuzzleHttp_1_1HandlerStack_a8da30fb5d824c98e4f2ec402cb7b44ac}{create} (callable \$handler=null)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a composed Guzzle handler function by stacking middlewares on top of an H\+T\+TP handler function. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_acd991cc07f50dbb5ca301f703c11338f}\label{classGuzzleHttp_1_1HandlerStack_acd991cc07f50dbb5ca301f703c11338f}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{callable}]{\$handler = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$handler} & Underlying H\+T\+TP handler. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_a96c996cb646ff14c1e9302ffed3dde54}\label{classGuzzleHttp_1_1HandlerStack_a96c996cb646ff14c1e9302ffed3dde54}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!\+\_\+\+\_\+invoke@{\+\_\+\+\_\+invoke}}
+\index{\+\_\+\+\_\+invoke@{\+\_\+\+\_\+invoke}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+invoke()}{\_\_invoke()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::\+\_\+\+\_\+invoke (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface}}]{\$request,  }\item[{array}]{\$options }\end{DoxyParamCaption})}
+
+Invokes the handler stack as a composed handler
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & \\
+\hline
+array & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_a1e3074138c9cbfe2ab5ae3a35b6581d0}\label{classGuzzleHttp_1_1HandlerStack_a1e3074138c9cbfe2ab5ae3a35b6581d0}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!\+\_\+\+\_\+to\+String@{\+\_\+\+\_\+to\+String}}
+\index{\+\_\+\+\_\+to\+String@{\+\_\+\+\_\+to\+String}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+to\+String()}{\_\_toString()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::\+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Dumps a string representation of the stack.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_a7c217d7774bc2e0fa9d9f3e9502b7cd2}\label{classGuzzleHttp_1_1HandlerStack_a7c217d7774bc2e0fa9d9f3e9502b7cd2}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!after@{after}}
+\index{after@{after}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{after()}{after()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::after (\begin{DoxyParamCaption}\item[{}]{\$find\+Name,  }\item[{callable}]{\$middleware,  }\item[{}]{\$with\+Name = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Add a middleware after another middleware by name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$find\+Name} & \hyperlink{classGuzzleHttp_1_1Middleware}{Middleware} to find \\
+\hline
+callable & {\em \$middleware} & \hyperlink{classGuzzleHttp_1_1Middleware}{Middleware} function \\
+\hline
+string & {\em \$with\+Name} & Name to register for this middleware. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_aeca62dd3e371afcbd54d7e0d90897051}\label{classGuzzleHttp_1_1HandlerStack_aeca62dd3e371afcbd54d7e0d90897051}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!before@{before}}
+\index{before@{before}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{before()}{before()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::before (\begin{DoxyParamCaption}\item[{}]{\$find\+Name,  }\item[{callable}]{\$middleware,  }\item[{}]{\$with\+Name = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Add a middleware before another middleware by name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$find\+Name} & \hyperlink{classGuzzleHttp_1_1Middleware}{Middleware} to find \\
+\hline
+callable & {\em \$middleware} & \hyperlink{classGuzzleHttp_1_1Middleware}{Middleware} function \\
+\hline
+string & {\em \$with\+Name} & Name to register for this middleware. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_a8da30fb5d824c98e4f2ec402cb7b44ac}\label{classGuzzleHttp_1_1HandlerStack_a8da30fb5d824c98e4f2ec402cb7b44ac}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!create@{create}}
+\index{create@{create}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::create (\begin{DoxyParamCaption}\item[{callable}]{\$handler = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a default handler stack that can be used by clients.
+
+The returned handler will wrap the provided handler or use the most appropriate default handler for your system. The returned \hyperlink{classGuzzleHttp_1_1HandlerStack}{Handler\+Stack} has support for cookies, redirects, H\+T\+TP error exceptions, and preparing a body before sending.
+
+The returned handler stack can be passed to a client in the \char`\"{}handler\char`\"{} option.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$handler} & H\+T\+TP handler function to use with the stack. If no handler is provided, the best handler for your system will be utilized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classGuzzleHttp_1_1HandlerStack}{Handler\+Stack} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_ae0f44f5088fb05b053a56fe84f264637}\label{classGuzzleHttp_1_1HandlerStack_ae0f44f5088fb05b053a56fe84f264637}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!has\+Handler@{has\+Handler}}
+\index{has\+Handler@{has\+Handler}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{has\+Handler()}{hasHandler()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::has\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns true if the builder has a handler.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_a035eb8174a7cf962fe6064f5dda2a61e}\label{classGuzzleHttp_1_1HandlerStack_a035eb8174a7cf962fe6064f5dda2a61e}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!push@{push}}
+\index{push@{push}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::push (\begin{DoxyParamCaption}\item[{callable}]{\$middleware,  }\item[{}]{\$name = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Push a middleware to the top of the stack.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$middleware} & \hyperlink{classGuzzleHttp_1_1Middleware}{Middleware} function \\
+\hline
+string & {\em \$name} & Name to register for this middleware. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_a54107f838fb918ab3f1a017007a635ab}\label{classGuzzleHttp_1_1HandlerStack_a54107f838fb918ab3f1a017007a635ab}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!remove@{remove}}
+\index{remove@{remove}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::remove (\begin{DoxyParamCaption}\item[{}]{\$remove }\end{DoxyParamCaption})}
+
+Remove a middleware by instance or name from the stack.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable | string & {\em \$remove} & \hyperlink{classGuzzleHttp_1_1Middleware}{Middleware} to remove by instance or name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_a6b8ed28dc14bef746d5a11e536d0f929}\label{classGuzzleHttp_1_1HandlerStack_a6b8ed28dc14bef746d5a11e536d0f929}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!resolve@{resolve}}
+\index{resolve@{resolve}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::resolve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compose the middleware and handler into a single callable function.
+
+\begin{DoxyReturn}{Returns}
+callable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_abe01e072281e5c70dbb03db23bde22f0}\label{classGuzzleHttp_1_1HandlerStack_abe01e072281e5c70dbb03db23bde22f0}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!set\+Handler@{set\+Handler}}
+\index{set\+Handler@{set\+Handler}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{set\+Handler()}{setHandler()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::set\+Handler (\begin{DoxyParamCaption}\item[{callable}]{\$handler }\end{DoxyParamCaption})}
+
+Set the H\+T\+TP handler that actually returns a promise.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$handler} & Accepts a request and array of options and returns a Promise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGuzzleHttp_1_1HandlerStack_a545c84f9b80b8a4b66ff845c45484808}\label{classGuzzleHttp_1_1HandlerStack_a545c84f9b80b8a4b66ff845c45484808}} 
+\index{Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}!unshift@{unshift}}
+\index{unshift@{unshift}!Guzzle\+Http\+::\+Handler\+Stack@{Guzzle\+Http\+::\+Handler\+Stack}}
+\subsubsection{\texorpdfstring{unshift()}{unshift()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\+Stack\+::unshift (\begin{DoxyParamCaption}\item[{callable}]{\$middleware,  }\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Unshift a middleware to the bottom of the stack.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$middleware} & \hyperlink{classGuzzleHttp_1_1Middleware}{Middleware} function \\
+\hline
+string & {\em \$name} & Name to register for this middleware. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/guzzle/src/Handler\+Stack.\+php\end{DoxyCompactItemize}

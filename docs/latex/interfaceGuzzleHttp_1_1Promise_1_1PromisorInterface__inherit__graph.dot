@@ -1,0 +1,10 @@
+digraph "GuzzleHttp\Promise\PromisorInterface"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="GuzzleHttp\\Promise\l\\PromisorInterface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="GuzzleHttp\\Pool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Pool.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="GuzzleHttp\\Promise\l\\EachPromise",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Promise_1_1EachPromise.html"];
+}

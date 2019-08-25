@@ -1,0 +1,245 @@
+\hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar}{}\section{Guzzle\+Http\textbackslash{}Cookie\textbackslash{}Cookie\+Jar Class Reference}
+\label{classGuzzleHttp_1_1Cookie_1_1CookieJar}\index{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar@{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Cookie\textbackslash{}Cookie\+Jar\+:
+% FIG 0
+
+
+Collaboration diagram for Guzzle\+Http\textbackslash{}Cookie\textbackslash{}Cookie\+Jar\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_a0c8c9443bcb9bfeccaad84763ddc6ba3}{\+\_\+\+\_\+construct} (\$strict\+Mode=false, \$cookie\+Array=\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_a9cf49d547f8764e0b816c90d7b9a733a}{get\+Cookie\+By\+Name} (\$name)
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_aaefc8cd1a587b3ab33166e5b189a6dfd}{to\+Array} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_a022cbce4acc7ea4beb36db01b50cb330}{clear} (\$domain=null, \$path=null, \$name=null)
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_a2d9a31508947248644e43d5f86defdf2}{clear\+Session\+Cookies} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_aad8a1f58451d3b8305793c16923bf511}{set\+Cookie} (\hyperlink{classGuzzleHttp_1_1Cookie_1_1SetCookie}{Set\+Cookie} \$cookie)
+\item 
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_aefef499e6badac565cdd83edabd7370c}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_aefef499e6badac565cdd83edabd7370c}} 
+{\bfseries count} ()
+\item 
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_a769061a2cf2b6c32986f108b2a7fd68b}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_a769061a2cf2b6c32986f108b2a7fd68b}} 
+{\bfseries get\+Iterator} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_a430389ccb62792ad900095f6010ee483}{extract\+Cookies} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$request, \hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface}{Response\+Interface} \$response)
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_acca0464fa0926e364848fe9c81f96714}{with\+Cookie\+Header} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$request)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_a0b7ee1f3fe1391f68817393568051671}{from\+Array} (array \$cookies, \$domain)
+\item 
+static \hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_a6774ce1a8f02306aef22ce72db15921b}{get\+Cookie\+Value} (\$value)
+\item 
+static \hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar_a0d462d85e5bb53da6b8a8654d5d4db28}{should\+Persist} (\hyperlink{classGuzzleHttp_1_1Cookie_1_1SetCookie}{Set\+Cookie} \$cookie, \$allow\+Session\+Cookies=false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cookie jar that stores cookies as an array 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_a0c8c9443bcb9bfeccaad84763ddc6ba3}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_a0c8c9443bcb9bfeccaad84763ddc6ba3}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$strict\+Mode = {\ttfamily false},  }\item[{}]{\$cookie\+Array = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$strict\+Mode} & Set to true to throw exceptions when invalid cookies are added to the cookie jar. \\
+\hline
+array & {\em \$cookie\+Array} & Array of \hyperlink{classGuzzleHttp_1_1Cookie_1_1SetCookie}{Set\+Cookie} objects or a hash of arrays that can be used with the \hyperlink{classGuzzleHttp_1_1Cookie_1_1SetCookie}{Set\+Cookie} constructor \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_a022cbce4acc7ea4beb36db01b50cb330}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_a022cbce4acc7ea4beb36db01b50cb330}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!clear@{clear}}
+\index{clear@{clear}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::clear (\begin{DoxyParamCaption}\item[{}]{\$domain = {\ttfamily null},  }\item[{}]{\$path = {\ttfamily null},  }\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Remove cookies currently held in the cookie jar.
+
+Invoking this method without arguments will empty the whole cookie jar. If given a \$domain argument only cookies belonging to that domain will be removed. If given a \$domain and \$path argument, cookies belonging to the specified path within that domain are removed. If given all three arguments, then the cookie with the specified name, path and domain is removed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$domain} & Clears cookies matching a domain \\
+\hline
+string & {\em \$path} & Clears cookies matching a domain and path \\
+\hline
+string & {\em \$name} & Clears cookies matching a domain, path, and name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceGuzzleHttp_1_1Cookie_1_1CookieJarInterface}{Cookie\+Jar\+Interface} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceGuzzleHttp_1_1Cookie_1_1CookieJarInterface_a2af2d155340b18fe8c901cbe8a7623ce}{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_a2d9a31508947248644e43d5f86defdf2}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_a2d9a31508947248644e43d5f86defdf2}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!clear\+Session\+Cookies@{clear\+Session\+Cookies}}
+\index{clear\+Session\+Cookies@{clear\+Session\+Cookies}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{clear\+Session\+Cookies()}{clearSessionCookies()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::clear\+Session\+Cookies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Discard all sessions cookies.
+
+Removes cookies that don\textquotesingle{}t have an expire field or a have a discard field set to true. To be called when the user agent shuts down according to R\+FC 2965. 
+
+Implements \hyperlink{interfaceGuzzleHttp_1_1Cookie_1_1CookieJarInterface_abd31effbb05237e8c730b03951b6d3ab}{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_a430389ccb62792ad900095f6010ee483}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_a430389ccb62792ad900095f6010ee483}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!extract\+Cookies@{extract\+Cookies}}
+\index{extract\+Cookies@{extract\+Cookies}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{extract\+Cookies()}{extractCookies()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::extract\+Cookies (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface}}]{\$request,  }\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface}{Response\+Interface}}]{\$response }\end{DoxyParamCaption})}
+
+Extract cookies from an H\+T\+TP response and store them in the \hyperlink{classGuzzleHttp_1_1Cookie_1_1CookieJar}{Cookie\+Jar}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request that was sent \\
+\hline
+Response\+Interface & {\em \$response} & Response that was received \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfaceGuzzleHttp_1_1Cookie_1_1CookieJarInterface_a2167d5ad5dbfbe7823f0c92d60fd376d}{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_a0b7ee1f3fe1391f68817393568051671}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_a0b7ee1f3fe1391f68817393568051671}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!from\+Array@{from\+Array}}
+\index{from\+Array@{from\+Array}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{from\+Array()}{fromArray()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::from\+Array (\begin{DoxyParamCaption}\item[{array}]{\$cookies,  }\item[{}]{\$domain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a new Cookie jar from an associative array and domain.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$cookies} & Cookies to create the jar from \\
+\hline
+string & {\em \$domain} & Domain to set the cookies to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_a9cf49d547f8764e0b816c90d7b9a733a}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_a9cf49d547f8764e0b816c90d7b9a733a}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!get\+Cookie\+By\+Name@{get\+Cookie\+By\+Name}}
+\index{get\+Cookie\+By\+Name@{get\+Cookie\+By\+Name}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{get\+Cookie\+By\+Name()}{getCookieByName()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::get\+Cookie\+By\+Name (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Finds and returns the cookie based on the name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & cookie name to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set\+Cookie$\vert$null cookie that was found or null if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_a6774ce1a8f02306aef22ce72db15921b}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_a6774ce1a8f02306aef22ce72db15921b}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!get\+Cookie\+Value@{get\+Cookie\+Value}}
+\index{get\+Cookie\+Value@{get\+Cookie\+Value}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{get\+Cookie\+Value()}{getCookieValue()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::get\+Cookie\+Value (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000001}{Deprecated}]\end{DoxyRefDesc}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_aad8a1f58451d3b8305793c16923bf511}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_aad8a1f58451d3b8305793c16923bf511}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!set\+Cookie@{set\+Cookie}}
+\index{set\+Cookie@{set\+Cookie}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{set\+Cookie()}{setCookie()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::set\+Cookie (\begin{DoxyParamCaption}\item[{\hyperlink{classGuzzleHttp_1_1Cookie_1_1SetCookie}{Set\+Cookie}}]{\$cookie }\end{DoxyParamCaption})}
+
+Sets a cookie in the cookie jar.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1SetCookie}{Set\+Cookie} & {\em \$cookie} & Cookie to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true on success or false on failure 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceGuzzleHttp_1_1Cookie_1_1CookieJarInterface_a9e9225852ba0caa3f0c241d49167f8bf}{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_a0d462d85e5bb53da6b8a8654d5d4db28}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_a0d462d85e5bb53da6b8a8654d5d4db28}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!should\+Persist@{should\+Persist}}
+\index{should\+Persist@{should\+Persist}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{should\+Persist()}{shouldPersist()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::should\+Persist (\begin{DoxyParamCaption}\item[{\hyperlink{classGuzzleHttp_1_1Cookie_1_1SetCookie}{Set\+Cookie}}]{\$cookie,  }\item[{}]{\$allow\+Session\+Cookies = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Evaluate if this cookie should be persisted to storage that survives between requests.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1SetCookie}{Set\+Cookie} & {\em \$cookie} & Being evaluated. \\
+\hline
+bool & {\em \$allow\+Session\+Cookies} & If we should persist session cookies \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_aaefc8cd1a587b3ab33166e5b189a6dfd}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_aaefc8cd1a587b3ab33166e5b189a6dfd}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!to\+Array@{to\+Array}}
+\index{to\+Array@{to\+Array}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{to\+Array()}{toArray()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::to\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Converts the cookie jar to an array.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceGuzzleHttp_1_1Cookie_1_1CookieJarInterface_a558432f6d2d19c8cf12f93aab90dd237}{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1CookieJar_acca0464fa0926e364848fe9c81f96714}\label{classGuzzleHttp_1_1Cookie_1_1CookieJar_acca0464fa0926e364848fe9c81f96714}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}!with\+Cookie\+Header@{with\+Cookie\+Header}}
+\index{with\+Cookie\+Header@{with\+Cookie\+Header}!Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{with\+Cookie\+Header()}{withCookieHeader()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+::with\+Cookie\+Header (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface}}]{\$request }\end{DoxyParamCaption})}
+
+Create a request with added cookie headers.
+
+If no matching cookies are found in the cookie jar, then no Cookie header is added to the request and the same request is returned.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request object to modify.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Request\+Interface returns the modified request. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceGuzzleHttp_1_1Cookie_1_1CookieJarInterface_a677129d290a059ebd29b00663b63c051}{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+Cookie\+Jar\+Interface}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/guzzle/src/\+Cookie/Cookie\+Jar.\+php\end{DoxyCompactItemize}

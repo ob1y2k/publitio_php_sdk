@@ -1,0 +1,177 @@
+\hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer}{}\section{Guzzle\+Http\textbackslash{}Psr7\textbackslash{}Uri\+Normalizer Class Reference}
+\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer}\index{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer@{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_aa0606a65d9e3406faf5953145597a227}{normalize} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface} \$uri, \$flags=self\+::\+P\+R\+E\+S\+E\+R\+V\+I\+N\+G\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+O\+NS)
+\item 
+static \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_aafc6786d981cc772ce1cb14a1117da07}{is\+Equivalent} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface} \$uri1, \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface} \$uri2, \$normalizations=self\+::\+P\+R\+E\+S\+E\+R\+V\+I\+N\+G\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+O\+NS)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a6a64a4e9fc8e6b71943ae300f1686460}{P\+R\+E\+S\+E\+R\+V\+I\+N\+G\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+O\+NS} = 63
+\item 
+const \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_afca0131f77bcc9d23a6df99848fa5ffd}{C\+A\+P\+I\+T\+A\+L\+I\+Z\+E\+\_\+\+P\+E\+R\+C\+E\+N\+T\+\_\+\+E\+N\+C\+O\+D\+I\+NG} = 1
+\item 
+const \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_acedf8393e3f209662798ca302e25017c}{D\+E\+C\+O\+D\+E\+\_\+\+U\+N\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+RS} = 2
+\item 
+const \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_ab4123a1eaa720a392a475125b9bde4c2}{C\+O\+N\+V\+E\+R\+T\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+P\+A\+TH} = 4
+\item 
+const \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a185836fe2ddc337a4581a02abc603d8f}{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST} = 8
+\item 
+const \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_aacb5df77fe58dcf0358d8b69092adced}{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT} = 16
+\item 
+const \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a0a143f2499d8ca80b868da19fae75009}{R\+E\+M\+O\+V\+E\+\_\+\+D\+O\+T\+\_\+\+S\+E\+G\+M\+E\+N\+TS} = 32
+\item 
+const \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a1071932d3c276775e9a21435d8092f3a}{R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+S\+L\+A\+S\+H\+ES} = 64
+\item 
+const \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_ac255a421712175a81072304b221428bf}{S\+O\+R\+T\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+RS} = 128
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides methods to normalize and compare U\+R\+Is.
+
+\begin{DoxyAuthor}{Author}
+Tobias Schultze
+\end{DoxyAuthor}
+\hyperlink{}{https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/6}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_aafc6786d981cc772ce1cb14a1117da07}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_aafc6786d981cc772ce1cb14a1117da07}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!is\+Equivalent@{is\+Equivalent}}
+\index{is\+Equivalent@{is\+Equivalent}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{is\+Equivalent()}{isEquivalent()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::is\+Equivalent (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface}}]{\$uri1,  }\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface}}]{\$uri2,  }\item[{}]{\$normalizations = {\ttfamily self\+:\+:PRESERVING\+\_\+NORMALIZATIONS} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Whether two U\+R\+Is can be considered equivalent.
+
+Both U\+R\+Is are normalized automatically before comparison with the given \$normalizations bitmask. The method also accepts relative U\+RI references and returns true when they are equivalent. This of course assumes they will be resolved against the same base U\+RI. If this is not the case, determination of equivalence or difference of relative references does not mean anything.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Uri\+Interface & {\em \$uri1} & An U\+RI to compare \\
+\hline
+Uri\+Interface & {\em \$uri2} & An U\+RI to compare \\
+\hline
+int & {\em \$normalizations} & A bitmask of normalizations to apply, see constants\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool \hyperlink{}{https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/6.\+1}
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_aa0606a65d9e3406faf5953145597a227}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_aa0606a65d9e3406faf5953145597a227}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!normalize@{normalize}}
+\index{normalize@{normalize}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::normalize (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface}}]{\$uri,  }\item[{}]{\$flags = {\ttfamily self\+:\+:PRESERVING\+\_\+NORMALIZATIONS} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a normalized U\+RI.
+
+The scheme and host component are already normalized to lowercase per P\+S\+R-\/7 Uri\+Interface. This methods adds additional normalizations that can be configured with the \$flags parameter.
+
+P\+S\+R-\/7 Uri\+Interface cannot distinguish between an empty component and a missing component as get\+Query(), get\+Fragment() etc. always return a string. This means the U\+R\+Is \char`\"{}/?\#\char`\"{} and \char`\"{}/\char`\"{} are treated equivalent which is not necessarily true according to R\+FC 3986. But that difference is highly uncommon in reality. So this potential normalization is implied in P\+S\+R-\/7 as well.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Uri\+Interface & {\em \$uri} & The U\+RI to normalize \\
+\hline
+int & {\em \$flags} & A bitmask of normalizations to apply, see constants\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uri\+Interface The normalized U\+RI \hyperlink{}{https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/6.\+2}
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_afca0131f77bcc9d23a6df99848fa5ffd}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_afca0131f77bcc9d23a6df99848fa5ffd}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!C\+A\+P\+I\+T\+A\+L\+I\+Z\+E\+\_\+\+P\+E\+R\+C\+E\+N\+T\+\_\+\+E\+N\+C\+O\+D\+I\+NG@{C\+A\+P\+I\+T\+A\+L\+I\+Z\+E\+\_\+\+P\+E\+R\+C\+E\+N\+T\+\_\+\+E\+N\+C\+O\+D\+I\+NG}}
+\index{C\+A\+P\+I\+T\+A\+L\+I\+Z\+E\+\_\+\+P\+E\+R\+C\+E\+N\+T\+\_\+\+E\+N\+C\+O\+D\+I\+NG@{C\+A\+P\+I\+T\+A\+L\+I\+Z\+E\+\_\+\+P\+E\+R\+C\+E\+N\+T\+\_\+\+E\+N\+C\+O\+D\+I\+NG}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{C\+A\+P\+I\+T\+A\+L\+I\+Z\+E\+\_\+\+P\+E\+R\+C\+E\+N\+T\+\_\+\+E\+N\+C\+O\+D\+I\+NG}{CAPITALIZE\_PERCENT\_ENCODING}}
+{\footnotesize\ttfamily const Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::\+C\+A\+P\+I\+T\+A\+L\+I\+Z\+E\+\_\+\+P\+E\+R\+C\+E\+N\+T\+\_\+\+E\+N\+C\+O\+D\+I\+NG = 1}
+
+All letters within a percent-\/encoding triplet (e.\+g., \char`\"{}\%3\+A\char`\"{}) are case-\/insensitive, and should be capitalized.
+
+Example\+: \href{http://example.org/a%c2%b1b}{\tt http\+://example.\+org/a\%c2\%b1b} → \href{http://example.org/a%C2%B1b}{\tt http\+://example.\+org/a\%\+C2\%\+B1b} \mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_ab4123a1eaa720a392a475125b9bde4c2}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_ab4123a1eaa720a392a475125b9bde4c2}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!C\+O\+N\+V\+E\+R\+T\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+P\+A\+TH@{C\+O\+N\+V\+E\+R\+T\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+P\+A\+TH}}
+\index{C\+O\+N\+V\+E\+R\+T\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+P\+A\+TH@{C\+O\+N\+V\+E\+R\+T\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+P\+A\+TH}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{C\+O\+N\+V\+E\+R\+T\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+P\+A\+TH}{CONVERT\_EMPTY\_PATH}}
+{\footnotesize\ttfamily const Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::\+C\+O\+N\+V\+E\+R\+T\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+P\+A\+TH = 4}
+
+Converts the empty path to \char`\"{}/\char`\"{} for http and https U\+R\+Is.
+
+Example\+: \href{http://example.org}{\tt http\+://example.\+org} → \href{http://example.org/}{\tt http\+://example.\+org/} \mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_acedf8393e3f209662798ca302e25017c}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_acedf8393e3f209662798ca302e25017c}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!D\+E\+C\+O\+D\+E\+\_\+\+U\+N\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+RS@{D\+E\+C\+O\+D\+E\+\_\+\+U\+N\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+RS}}
+\index{D\+E\+C\+O\+D\+E\+\_\+\+U\+N\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+RS@{D\+E\+C\+O\+D\+E\+\_\+\+U\+N\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+RS}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{D\+E\+C\+O\+D\+E\+\_\+\+U\+N\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+RS}{DECODE\_UNRESERVED\_CHARACTERS}}
+{\footnotesize\ttfamily const Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::\+D\+E\+C\+O\+D\+E\+\_\+\+U\+N\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+RS = 2}
+
+Decodes percent-\/encoded octets of unreserved characters.
+
+For consistency, percent-\/encoded octets in the ranges of A\+L\+P\+HA (\%41–\%5A and \%61–\%7A), D\+I\+G\+IT (\%30–\%39), hyphen (\%2D), period (\%2E), underscore (\%5F), or tilde (\%7E) should not be created by U\+RI producers and, when found in a U\+RI, should be decoded to their corresponding unreserved characters by U\+RI normalizers.
+
+Example\+: \href{http://example.org/%7Eusern%61me/}{\tt http\+://example.\+org/\%7\+Eusern\%61me/} → \href{http://example.org/~username/}{\tt http\+://example.\+org/$\sim$username/} \mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a6a64a4e9fc8e6b71943ae300f1686460}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a6a64a4e9fc8e6b71943ae300f1686460}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!P\+R\+E\+S\+E\+R\+V\+I\+N\+G\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+O\+NS@{P\+R\+E\+S\+E\+R\+V\+I\+N\+G\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+O\+NS}}
+\index{P\+R\+E\+S\+E\+R\+V\+I\+N\+G\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+O\+NS@{P\+R\+E\+S\+E\+R\+V\+I\+N\+G\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+O\+NS}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{P\+R\+E\+S\+E\+R\+V\+I\+N\+G\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+O\+NS}{PRESERVING\_NORMALIZATIONS}}
+{\footnotesize\ttfamily const Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::\+P\+R\+E\+S\+E\+R\+V\+I\+N\+G\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+O\+NS = 63}
+
+Default normalizations which only include the ones that preserve semantics.
+
+self\+::\+C\+A\+P\+I\+T\+A\+L\+I\+Z\+E\+\_\+\+P\+E\+R\+C\+E\+N\+T\+\_\+\+E\+N\+C\+O\+D\+I\+NG $\vert$ self\+::\+D\+E\+C\+O\+D\+E\+\_\+\+U\+N\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+RS $\vert$ self\+::\+C\+O\+N\+V\+E\+R\+T\+\_\+\+E\+M\+P\+T\+Y\+\_\+\+P\+A\+TH $\vert$ self\+::\+R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST $\vert$ self\+::\+R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT $\vert$ self\+::\+R\+E\+M\+O\+V\+E\+\_\+\+D\+O\+T\+\_\+\+S\+E\+G\+M\+E\+N\+TS \mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a185836fe2ddc337a4581a02abc603d8f}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a185836fe2ddc337a4581a02abc603d8f}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST@{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST}}
+\index{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST@{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST}{REMOVE\_DEFAULT\_HOST}}
+{\footnotesize\ttfamily const Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::\+R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST = 8}
+
+Removes the default host of the given U\+RI scheme from the U\+RI.
+
+Only the \char`\"{}file\char`\"{} scheme defines the default host \char`\"{}localhost\char`\"{}. All of {\ttfamily \href{file:/myfile}{\tt file\+:/myfile}}, {\ttfamily \href{file:///myfile}{\tt file\+:///myfile}}, and {\ttfamily \href{file://localhost/myfile}{\tt file\+://localhost/myfile}} are equivalent according to R\+FC 3986. The first format is not accepted by P\+H\+Ps stream functions and thus already normalized implicitly to the second format in the \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri}{Uri} class. See {\ttfamily Guzzle\+Http\textbackslash{}Psr7\textbackslash{}\hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a55774932d840a511df95f7e7ca8e8598}{Uri\+::compose\+Components}}.
+
+Example\+: \href{file://localhost/myfile}{\tt file\+://localhost/myfile} → \href{file:///myfile}{\tt file\+:///myfile} \mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_aacb5df77fe58dcf0358d8b69092adced}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_aacb5df77fe58dcf0358d8b69092adced}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT@{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}}
+\index{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT@{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}{REMOVE\_DEFAULT\_PORT}}
+{\footnotesize\ttfamily const Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::\+R\+E\+M\+O\+V\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT = 16}
+
+Removes the default port of the given U\+RI scheme from the U\+RI.
+
+Example\+: \href{http://example.org:80/}{\tt http\+://example.\+org\+:80/} → \href{http://example.org/}{\tt http\+://example.\+org/} \mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a0a143f2499d8ca80b868da19fae75009}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a0a143f2499d8ca80b868da19fae75009}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!R\+E\+M\+O\+V\+E\+\_\+\+D\+O\+T\+\_\+\+S\+E\+G\+M\+E\+N\+TS@{R\+E\+M\+O\+V\+E\+\_\+\+D\+O\+T\+\_\+\+S\+E\+G\+M\+E\+N\+TS}}
+\index{R\+E\+M\+O\+V\+E\+\_\+\+D\+O\+T\+\_\+\+S\+E\+G\+M\+E\+N\+TS@{R\+E\+M\+O\+V\+E\+\_\+\+D\+O\+T\+\_\+\+S\+E\+G\+M\+E\+N\+TS}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{R\+E\+M\+O\+V\+E\+\_\+\+D\+O\+T\+\_\+\+S\+E\+G\+M\+E\+N\+TS}{REMOVE\_DOT\_SEGMENTS}}
+{\footnotesize\ttfamily const Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::\+R\+E\+M\+O\+V\+E\+\_\+\+D\+O\+T\+\_\+\+S\+E\+G\+M\+E\+N\+TS = 32}
+
+Removes unnecessary dot-\/segments.
+
+Dot-\/segments in relative-\/path references are not removed as it would change the semantics of the U\+RI reference.
+
+Example\+: \href{http://example.org/../a/b/../c/./d.html}{\tt http\+://example.\+org/../a/b/../c/./d.\+html} → \href{http://example.org/a/c/d.html}{\tt http\+://example.\+org/a/c/d.\+html} \mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a1071932d3c276775e9a21435d8092f3a}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_a1071932d3c276775e9a21435d8092f3a}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+S\+L\+A\+S\+H\+ES@{R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+S\+L\+A\+S\+H\+ES}}
+\index{R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+S\+L\+A\+S\+H\+ES@{R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+S\+L\+A\+S\+H\+ES}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+S\+L\+A\+S\+H\+ES}{REMOVE\_DUPLICATE\_SLASHES}}
+{\footnotesize\ttfamily const Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::\+R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+S\+L\+A\+S\+H\+ES = 64}
+
+Paths which include two or more adjacent slashes are converted to one.
+
+Webservers usually ignore duplicate slashes and treat those U\+R\+Is equivalent. But in theory those U\+R\+Is do not need to be equivalent. So this normalization may change the semantics. Encoded slashes (\%2F) are not removed.
+
+Example\+: \href{http://example.org//foo///bar.html}{\tt http\+://example.\+org//foo///bar.\+html} → \href{http://example.org/foo/bar.html}{\tt http\+://example.\+org/foo/bar.\+html} \mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_ac255a421712175a81072304b221428bf}\label{classGuzzleHttp_1_1Psr7_1_1UriNormalizer_ac255a421712175a81072304b221428bf}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}!S\+O\+R\+T\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+RS@{S\+O\+R\+T\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+RS}}
+\index{S\+O\+R\+T\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+RS@{S\+O\+R\+T\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+RS}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Normalizer}}
+\subsubsection{\texorpdfstring{S\+O\+R\+T\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+RS}{SORT\_QUERY\_PARAMETERS}}
+{\footnotesize\ttfamily const Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Normalizer\+::\+S\+O\+R\+T\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+RS = 128}
+
+Sort query parameters with their values in alphabetical order.
+
+However, the order of parameters in a U\+RI may be significant (this is not defined by the standard). So this normalization is not safe and may change the semantics of the U\+RI.
+
+Example\+: ?lang=en\&article=fred → ?article=fred\&lang=en
+
+Note\+: The sorting is neither locale nor Unicode aware (the U\+RI query does not get decoded at all) as the purpose is to be able to compare U\+R\+Is in a reproducible way, not to have the params sorted perfectly. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/psr7/src/Uri\+Normalizer.\+php\end{DoxyCompactItemize}

@@ -79,9 +79,9 @@ class API
     }
 
     /**
-     * Adds the standard API query arguments to $args.
+     * Adds the standard API query arguments to `$args`.
      * These are the arguments that must be present in each Publitio API call,
-     * such as api_key and api_signature.
+     * such as 'api_key' and 'api_signature'.
      *
      * @param array $args User's query arguments.
      */
@@ -100,17 +100,17 @@ class API
     /**
      * Make an %API call. For a list of avaliable calls, see https://publit.io/docs.
      * Use this method when you aren't going to be uploading any files with the call.
-     * If you wish to upload a file, use the uploadFile or uploadRemoteFile methods.
+     * If you wish to upload a file, use the `uploadFile` or `uploadRemoteFile` methods.
      *
      * @param string $call_url The %API call endpoint, for example '/files/list'.
      * @param string $method The HTTP method, for example 'GET' or 'DELETE'.
      *                       Which of these you need depends on what kind of call you are making.
      *                       The method for each %API URL is documented at https://publit.io/docs.
      * @param array $args The URL query parameters.
-     * @return object The response JSON parsed using json_decode.
+     * @return object The response JSON parsed using `json_decode`.
      * @throws BadJSONResponse when the server returns an invalid JSON reponse.
      *                         Note: if the server is returning an invalid JSON response it is likely
-     *                         that $call_url is invalid, or perhaps there is an internal server error.
+     *                         that `$call_url` is invalid, or perhaps there is an internal server error.
      */
     public function call($call_url, $method = 'GET', $args = array())
     {
@@ -128,19 +128,19 @@ class API
     /**
      * Upload a file. Use this method when uploading local files
      * from memory. If you wish to upload a file using a remote URL,
-     * use uploadRemoteFile.
+     * use `uploadRemoteFile`.
      *
-     * @param mixed $file Pass a string to upload the contents of the string, pass an fopen resource
-     *                    to upload the contents of a PHP stream, or pass a Psr\\Http\\Message\\StreamInterface
+     * @param mixed $file Pass a string to upload the contents of the string, pass an `fopen` resource
+     *                    to upload the contents of a PHP stream, or pass a `Psr\Http\Message\StreamInterface`
      *                    to upload the contents of a PSR-7 stream.
-     * @param string $action Can be 'file' or 'watermark'. If $action is 'file',
+     * @param string $action Can be 'file' or 'watermark'. If `$action` is 'file',
      *                       this method will upload a file to the Publitio server.
-     *                       If $action is 'watermark', this method will upload a
-     *                       watermark to the server. If $action is anything else,
-     *                       an Exception will be thrown.
+     *                       If `$action` is 'watermark', this method will upload a
+     *                       watermark to the server. If `$action` is anything else,
+     *                       an `Exception` will be thrown.
      * @param array $args The URL query parameters.
-     * @return object The response JSON parsed using json_decode($response_body).
-     * @throws Exception when $action is invalid.
+     * @return object The response JSON parsed using `json_decode`.
+     * @throws Exception when `$action` is invalid.
      * @throws BadJSONResponse when the server responds with invalid JSON. This
      *                         might be due to an internal server error.
      */
@@ -165,18 +165,18 @@ class API
     }
 
     /**
-     * Upload the file at URL $remote_url to the server.
-     * If you need to upload a file from memory instead, use uploadFile.
+     * Upload the file at URL `$remote_url` to the server.
+     * If you need to upload a file from memory instead, use `uploadFile`.
      *
      * @param string $remote_url The URL of file to upload.
-     * @param string $action Can be 'file' or 'watermark'. If $action is 'file',
+     * @param string $action Can be 'file' or 'watermark'. If `$action` is 'file',
      *                       this method will upload a file to the Publitio server.
-     *                       If $action is 'watermark', this method will upload a
-     *                       watermark to the server. If $action is anything else,
-     *                       an Exception will be thrown.
+     *                       If `$action` is 'watermark', this method will upload a
+     *                       watermark to the server. If `$action` is anything else,
+     *                       an `Exception` will be thrown.
      * @param array $args The URL query parameters.
-     * @return object The response JSON parsed using json_decode($response_body).
-     * @throws Exception when $action is invalid.
+     * @return object The response JSON parsed using `json_decode`.
+     * @throws Exception when `$action` is invalid.
      * @throws BadJSONResponse when the server responds with invalid JSON. This
      *                         might be due to an internal server error.
      */

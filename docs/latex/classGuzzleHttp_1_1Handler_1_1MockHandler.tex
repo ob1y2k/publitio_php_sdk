@@ -1,0 +1,122 @@
+\hypertarget{classGuzzleHttp_1_1Handler_1_1MockHandler}{}\section{Guzzle\+Http\textbackslash{}Handler\textbackslash{}Mock\+Handler Class Reference}
+\label{classGuzzleHttp_1_1Handler_1_1MockHandler}\index{Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Mock\+Handler@{Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Mock\+Handler}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Handler\textbackslash{}Mock\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for Guzzle\+Http\textbackslash{}Handler\textbackslash{}Mock\+Handler\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGuzzleHttp_1_1Handler_1_1MockHandler_aec9499056c00b8e439cd506d204ccbfc}{\+\_\+\+\_\+construct} (array \$queue=null, callable \$on\+Fulfilled=null, callable \$on\+Rejected=null)
+\item 
+\mbox{\Hypertarget{classGuzzleHttp_1_1Handler_1_1MockHandler_a2e723832e2d7e3de7f45d1e1e141164a}\label{classGuzzleHttp_1_1Handler_1_1MockHandler_a2e723832e2d7e3de7f45d1e1e141164a}} 
+{\bfseries \+\_\+\+\_\+invoke} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$request, array \$options)
+\item 
+\hyperlink{classGuzzleHttp_1_1Handler_1_1MockHandler_af590249e733932b38aba2a475f81736d}{append} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Handler_1_1MockHandler_a55df209dc13fc934df2d4ada1fc59028}{get\+Last\+Request} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Handler_1_1MockHandler_ac59d2313d26737b1b932a0c376d5c9cc}{get\+Last\+Options} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Handler_1_1MockHandler_a8c1b39b146048819e507b8529f4e84c9}{count} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGuzzleHttp_1_1Handler_1_1MockHandler_a1178d28f3c427638cd7157f753fd2e36}{create\+With\+Middleware} (array \$queue=null, callable \$on\+Fulfilled=null, callable \$on\+Rejected=null)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handler that returns responses or throw exceptions from a queue. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Handler_1_1MockHandler_aec9499056c00b8e439cd506d204ccbfc}\label{classGuzzleHttp_1_1Handler_1_1MockHandler_aec9499056c00b8e439cd506d204ccbfc}} 
+\index{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Mock\+Handler\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$queue = {\ttfamily null},  }\item[{callable}]{\$on\+Fulfilled = {\ttfamily null},  }\item[{callable}]{\$on\+Rejected = {\ttfamily null} }\end{DoxyParamCaption})}
+
+The passed in value must be an array of \{\begin{DoxySeeAlso}{See also}
+Psr7\} objects, Exceptions, callables, or Promises.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$queue} & \\
+\hline
+callable & {\em \$on\+Fulfilled} & Callback to invoke when the return value is fulfilled. \\
+\hline
+callable & {\em \$on\+Rejected} & Callback to invoke when the return value is rejected. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Handler_1_1MockHandler_af590249e733932b38aba2a475f81736d}\label{classGuzzleHttp_1_1Handler_1_1MockHandler_af590249e733932b38aba2a475f81736d}} 
+\index{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}!append@{append}}
+\index{append@{append}!Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Mock\+Handler\+::append (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Adds one or more variadic requests, exceptions, callables, or promises to the queue. \mbox{\Hypertarget{classGuzzleHttp_1_1Handler_1_1MockHandler_a8c1b39b146048819e507b8529f4e84c9}\label{classGuzzleHttp_1_1Handler_1_1MockHandler_a8c1b39b146048819e507b8529f4e84c9}} 
+\index{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}!count@{count}}
+\index{count@{count}!Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}}
+\subsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Mock\+Handler\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the number of remaining items in the queue.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Handler_1_1MockHandler_a1178d28f3c427638cd7157f753fd2e36}\label{classGuzzleHttp_1_1Handler_1_1MockHandler_a1178d28f3c427638cd7157f753fd2e36}} 
+\index{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}!create\+With\+Middleware@{create\+With\+Middleware}}
+\index{create\+With\+Middleware@{create\+With\+Middleware}!Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}}
+\subsubsection{\texorpdfstring{create\+With\+Middleware()}{createWithMiddleware()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Mock\+Handler\+::create\+With\+Middleware (\begin{DoxyParamCaption}\item[{array}]{\$queue = {\ttfamily null},  }\item[{callable}]{\$on\+Fulfilled = {\ttfamily null},  }\item[{callable}]{\$on\+Rejected = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new \hyperlink{classGuzzleHttp_1_1Handler_1_1MockHandler}{Mock\+Handler} that uses the default handler stack list of middlewares.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$queue} & Array of responses, callables, or exceptions. \\
+\hline
+callable & {\em \$on\+Fulfilled} & Callback to invoke when the return value is fulfilled. \\
+\hline
+callable & {\em \$on\+Rejected} & Callback to invoke when the return value is rejected.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classGuzzleHttp_1_1HandlerStack}{Handler\+Stack} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Handler_1_1MockHandler_ac59d2313d26737b1b932a0c376d5c9cc}\label{classGuzzleHttp_1_1Handler_1_1MockHandler_ac59d2313d26737b1b932a0c376d5c9cc}} 
+\index{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}!get\+Last\+Options@{get\+Last\+Options}}
+\index{get\+Last\+Options@{get\+Last\+Options}!Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}}
+\subsubsection{\texorpdfstring{get\+Last\+Options()}{getLastOptions()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Mock\+Handler\+::get\+Last\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the last received request options.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Handler_1_1MockHandler_a55df209dc13fc934df2d4ada1fc59028}\label{classGuzzleHttp_1_1Handler_1_1MockHandler_a55df209dc13fc934df2d4ada1fc59028}} 
+\index{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}!get\+Last\+Request@{get\+Last\+Request}}
+\index{get\+Last\+Request@{get\+Last\+Request}!Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler@{Guzzle\+Http\+::\+Handler\+::\+Mock\+Handler}}
+\subsubsection{\texorpdfstring{get\+Last\+Request()}{getLastRequest()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Mock\+Handler\+::get\+Last\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the last received request.
+
+\begin{DoxyReturn}{Returns}
+Request\+Interface 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/guzzle/src/\+Handler/Mock\+Handler.\+php\end{DoxyCompactItemize}

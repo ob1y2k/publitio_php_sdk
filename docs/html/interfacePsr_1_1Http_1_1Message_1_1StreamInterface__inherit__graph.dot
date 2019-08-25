@@ -1,0 +1,31 @@
+digraph "Psr\Http\Message\StreamInterface"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Psr\\Http\\Message\\StreamInterface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="GuzzleHttp\\Psr7\\AppendStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1AppendStream.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GuzzleHttp\\Psr7\\BufferStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1BufferStream.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GuzzleHttp\\Psr7\\CachingStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1CachingStream.html"];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GuzzleHttp\\Psr7\\Dropping\lStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1DroppingStream.html"];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GuzzleHttp\\Psr7\\FnStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1FnStream.html"];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GuzzleHttp\\Psr7\\InflateStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1InflateStream.html"];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GuzzleHttp\\Psr7\\LazyOpen\lStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1LazyOpenStream.html"];
+  Node0 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="GuzzleHttp\\Psr7\\LimitStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1LimitStream.html"];
+  Node0 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="GuzzleHttp\\Psr7\\Multipart\lStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1MultipartStream.html"];
+  Node0 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="GuzzleHttp\\Psr7\\NoSeekStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1NoSeekStream.html"];
+  Node0 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="GuzzleHttp\\Psr7\\PumpStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1PumpStream.html"];
+  Node0 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="GuzzleHttp\\Psr7\\Stream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1Stream.html"];
+}

@@ -1,0 +1,393 @@
+\hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream}{}\section{Guzzle\+Http\textbackslash{}Psr7\textbackslash{}Fn\+Stream Class Reference}
+\label{classGuzzleHttp_1_1Psr7_1_1FnStream}\index{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream@{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Psr7\textbackslash{}Fn\+Stream\+:
+% FIG 0
+
+
+Collaboration diagram for Guzzle\+Http\textbackslash{}Psr7\textbackslash{}Fn\+Stream\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_ab24256dde91f757958e246ed84b8e651}{\+\_\+\+\_\+construct} (array \$methods)
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a0cb7bdbb2b50ef87622aab43d1f9048d}{\+\_\+\+\_\+get} (\$name)
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a92bd0f82b4b67f59914c29018bd29346}{\+\_\+\+\_\+destruct} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_ae684f892bfd98ed198432fe26ad43963}{\+\_\+\+\_\+wakeup} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_afa1de61c8570fc1009d328008249c2fc}{\+\_\+\+\_\+to\+String} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a45793fd71b5136c5dbfcac2c25950cc4}{close} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a0de4cb9ea46e419a73c9005d8fe93867}{detach} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a736dbff0dbf809c32e29c9e7805ccdeb}{get\+Size} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_ada664b3551d9ec37a20ded966d930508}{tell} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a9e01510a73317b43ef96fdfc7cc7e1c8}{eof} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a6e71bee66417963b7dbab145c209da6c}{is\+Seekable} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a8b27960dc20fe35531b4d1c2f124b605}{rewind} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_ae1f0b15fdfdf1e432c66ed01127cb01a}{seek} (\$offset, \$whence=S\+E\+E\+K\+\_\+\+S\+ET)
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a4ea21aece18cb3b83315dba95dcac9c7}{is\+Writable} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_ac7198f1b1058da5bde01c2f13b774c56}{write} (\$string)
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a2f45ad8af60ff908f1aac72e0887452f}{is\+Readable} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a514406fd0b0a778e0c94c5327ed7ce0c}{read} (\$length)
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_addd020a7528c39a029acef51538c42ab}{get\+Contents} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a9c89106787767a9c5d48ea71c72ace45}{get\+Metadata} (\$key=null)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_a905abb8520517f72c78a247bea38a210}{decorate} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface}{Stream\+Interface} \$stream, array \$methods)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Compose stream implementations based on a hash of functions.
+
+Allows for easy testing and extension of a provided stream without needing to create a concrete class for a simple extension point. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_ab24256dde91f757958e246ed84b8e651}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_ab24256dde91f757958e246ed84b8e651}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$methods }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$methods} & Hash of method name to a callable. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a92bd0f82b4b67f59914c29018bd29346}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a92bd0f82b4b67f59914c29018bd29346}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}}
+\index{\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::\+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The close method is called on the underlying stream only if possible. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a0cb7bdbb2b50ef87622aab43d1f9048d}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a0cb7bdbb2b50ef87622aab43d1f9048d}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!\+\_\+\+\_\+get@{\+\_\+\+\_\+get}}
+\index{\+\_\+\+\_\+get@{\+\_\+\+\_\+get}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+get()}{\_\_get()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::\+\_\+\+\_\+get (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Lazily determine which methods are not implemented. 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_afa1de61c8570fc1009d328008249c2fc}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_afa1de61c8570fc1009d328008249c2fc}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!\+\_\+\+\_\+to\+String@{\+\_\+\+\_\+to\+String}}
+\index{\+\_\+\+\_\+to\+String@{\+\_\+\+\_\+to\+String}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+to\+String()}{\_\_toString()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::\+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads all data from the stream into a string, from the beginning to end.
+
+This method M\+U\+ST attempt to seek to the beginning of the stream before reading data and read the stream until the end is reached.
+
+Warning\+: This could attempt to load a large amount of data into memory.
+
+This method M\+U\+ST N\+OT raise an exception in order to conform with P\+HP\textquotesingle{}s string casting operations.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://php.net/manual/en/language.oop5.magic.php#object.tostring}{\tt http\+://php.\+net/manual/en/language.\+oop5.\+magic.\+php\#object.\+tostring} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a72df4e8851ae1a81087f3415fd6d73cd}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_ae684f892bfd98ed198432fe26ad43963}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_ae684f892bfd98ed198432fe26ad43963}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!\+\_\+\+\_\+wakeup@{\+\_\+\+\_\+wakeup}}
+\index{\+\_\+\+\_\+wakeup@{\+\_\+\+\_\+wakeup}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+wakeup()}{\_\_wakeup()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::\+\_\+\+\_\+wakeup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+An unserialize would allow the \+\_\+\+\_\+destruct to run when the unserialized value goes out of scope. 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a45793fd71b5136c5dbfcac2c25950cc4}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a45793fd71b5136c5dbfcac2c25950cc4}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!close@{close}}
+\index{close@{close}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the stream and any underlying resources.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a0bbd0c821da0ee0c319f9867ff77c598}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a905abb8520517f72c78a247bea38a210}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a905abb8520517f72c78a247bea38a210}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!decorate@{decorate}}
+\index{decorate@{decorate}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{decorate()}{decorate()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::decorate (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface}{Stream\+Interface}}]{\$stream,  }\item[{array}]{\$methods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Adds custom functionality to an underlying stream by intercepting specific method calls.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Stream\+Interface & {\em \$stream} & \hyperlink{classGuzzleHttp_1_1Psr7_1_1Stream}{Stream} to decorate \\
+\hline
+array & {\em \$methods} & Hash of method name to a closure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream}{Fn\+Stream} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a0de4cb9ea46e419a73c9005d8fe93867}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a0de4cb9ea46e419a73c9005d8fe93867}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!detach@{detach}}
+\index{detach@{detach}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Separates any underlying resources from the stream.
+
+After the stream has been detached, the stream is in an unusable state.
+
+\begin{DoxyReturn}{Returns}
+resource$\vert$null Underlying P\+HP stream, if any 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a1670dba880a8c14690746732960d4c9c}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a9e01510a73317b43ef96fdfc7cc7e1c8}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a9e01510a73317b43ef96fdfc7cc7e1c8}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!eof@{eof}}
+\index{eof@{eof}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{eof()}{eof()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::eof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns true if the stream is at the end of the stream.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a502cc5ca370c6925b78d95d86d68777c}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_addd020a7528c39a029acef51538c42ab}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_addd020a7528c39a029acef51538c42ab}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!get\+Contents@{get\+Contents}}
+\index{get\+Contents@{get\+Contents}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{get\+Contents()}{getContents()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::get\+Contents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the remaining contents in a string
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a77f73d536f77e4a4e281d548ee905276}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a9c89106787767a9c5d48ea71c72ace45}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a9c89106787767a9c5d48ea71c72ace45}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!get\+Metadata@{get\+Metadata}}
+\index{get\+Metadata@{get\+Metadata}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{get\+Metadata()}{getMetadata()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::get\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$key = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Get stream metadata as an associative array or retrieve a specific key.
+
+The keys returned are identical to the keys returned from P\+HP\textquotesingle{}s stream\+\_\+get\+\_\+meta\+\_\+data() function.
+
+\hyperlink{}{string \$key Specific metadata to retrieve.  array$\vert$mixed$\vert$null Returns an associative array if no key is provided. Returns a specific key value if a key is provided and the value is found, or null if the key is not found. }
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_ac5e77fbbc7ba4235a4041d966f3aaa84}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a736dbff0dbf809c32e29c9e7805ccdeb}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a736dbff0dbf809c32e29c9e7805ccdeb}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the size of the stream if known.
+
+\begin{DoxyReturn}{Returns}
+int$\vert$null Returns the size in bytes if known, or null if unknown. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a85b9ff28e3ee39d95a47e623d866cf76}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a2f45ad8af60ff908f1aac72e0887452f}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a2f45ad8af60ff908f1aac72e0887452f}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!is\+Readable@{is\+Readable}}
+\index{is\+Readable@{is\+Readable}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{is\+Readable()}{isReadable()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::is\+Readable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether or not the stream is readable.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_aecf78407aa241622ae200a9faa471d32}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a6e71bee66417963b7dbab145c209da6c}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a6e71bee66417963b7dbab145c209da6c}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!is\+Seekable@{is\+Seekable}}
+\index{is\+Seekable@{is\+Seekable}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{is\+Seekable()}{isSeekable()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::is\+Seekable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether or not the stream is seekable.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_ad4a27548fd51bd12390d798981a1622b}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a4ea21aece18cb3b83315dba95dcac9c7}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a4ea21aece18cb3b83315dba95dcac9c7}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!is\+Writable@{is\+Writable}}
+\index{is\+Writable@{is\+Writable}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{is\+Writable()}{isWritable()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::is\+Writable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether or not the stream is writable.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a79287940d75d1951b831879fdc493883}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a514406fd0b0a778e0c94c5327ed7ce0c}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a514406fd0b0a778e0c94c5327ed7ce0c}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!read@{read}}
+\index{read@{read}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::read (\begin{DoxyParamCaption}\item[{}]{\$length }\end{DoxyParamCaption})}
+
+Read data from the stream.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$length} & Read up to \$length bytes from the object and return them. Fewer than \$length bytes may be returned if underlying stream call returns fewer bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Returns the data read from the stream, or an empty string if no bytes are available. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_ad41b4afe827e179dfb4b988e98cccb12}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_a8b27960dc20fe35531b4d1c2f124b605}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_a8b27960dc20fe35531b4d1c2f124b605}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!rewind@{rewind}}
+\index{rewind@{rewind}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{rewind()}{rewind()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::rewind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Seek to the beginning of the stream.
+
+If the stream is not seekable, this method will raise an exception; otherwise, it will perform a seek(0).
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1FnStream_ae1f0b15fdfdf1e432c66ed01127cb01a}{seek()} \hyperlink{}{on failure. }
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a48721ef4d5097250a3f94515938393c9}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_ae1f0b15fdfdf1e432c66ed01127cb01a}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_ae1f0b15fdfdf1e432c66ed01127cb01a}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!seek@{seek}}
+\index{seek@{seek}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{seek()}{seek()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::seek (\begin{DoxyParamCaption}\item[{}]{\$offset,  }\item[{}]{\$whence = {\ttfamily SEEK\+\_\+SET} }\end{DoxyParamCaption})}
+
+Seek to a position in the stream.
+
+\hyperlink{}{int \$offset Stream offset  int \$whence Specifies how the cursor position will be calculated based on the seek offset. Valid values are identical to the built-\/in P\+HP \$whence values for {\ttfamily fseek()}. S\+E\+E\+K\+\_\+\+S\+E\+T\+: Set position equal to offset bytes S\+E\+E\+K\+\_\+\+C\+U\+R\+: Set position to current location plus offset S\+E\+E\+K\+\_\+\+E\+N\+D\+: Set position to end-\/of-\/stream plus offset.   on failure. }
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a96ee062dc6cf4022d655dd15eaa81208}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_ada664b3551d9ec37a20ded966d930508}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_ada664b3551d9ec37a20ded966d930508}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!tell@{tell}}
+\index{tell@{tell}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{tell()}{tell()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::tell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the current position of the file read/write pointer
+
+\begin{DoxyReturn}{Returns}
+int Position of the file pointer 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_a9aa2f88a38f496d74100f42ddf0656ef}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1FnStream_ac7198f1b1058da5bde01c2f13b774c56}\label{classGuzzleHttp_1_1Psr7_1_1FnStream_ac7198f1b1058da5bde01c2f13b774c56}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}!write@{write}}
+\index{write@{write}!Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream@{Guzzle\+Http\+::\+Psr7\+::\+Fn\+Stream}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Fn\+Stream\+::write (\begin{DoxyParamCaption}\item[{}]{\$string }\end{DoxyParamCaption})}
+
+Write data to the stream.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & The string that is to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns the number of bytes written to the stream. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface_aabf9fe3e09f85753834cdb69bbdf3c3d}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Stream\+Interface}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/psr7/src/Fn\+Stream.\+php\end{DoxyCompactItemize}

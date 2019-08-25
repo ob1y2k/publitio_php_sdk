@@ -1,0 +1,164 @@
+\hypertarget{interfaceGuzzleHttp_1_1ClientInterface}{}\section{Guzzle\+Http\textbackslash{}Client\+Interface Interface Reference}
+\label{interfaceGuzzleHttp_1_1ClientInterface}\index{Guzzle\+Http\textbackslash{}\+Client\+Interface@{Guzzle\+Http\textbackslash{}\+Client\+Interface}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Client\+Interface\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1ClientInterface_a9a40e2f110ba4eb0a8a7a7a022860043}{send} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$\hyperlink{interfaceGuzzleHttp_1_1ClientInterface_a959a9c53eb4f138e1480e8e8b20ee71d}{request}, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1ClientInterface_ab96c38a486e346582ab945ba74d1625a}{send\+Async} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$\hyperlink{interfaceGuzzleHttp_1_1ClientInterface_a959a9c53eb4f138e1480e8e8b20ee71d}{request}, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1ClientInterface_a959a9c53eb4f138e1480e8e8b20ee71d}{request} (\$method, \$uri, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1ClientInterface_a3c5841834717706fbb7e1da2117d7d0c}{request\+Async} (\$method, \$uri, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1ClientInterface_a6d7e09251742f6a1227bd4abce2106e5}{get\+Config} (\$option=null)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1ClientInterface_a40c0034ad49feaeecc802d782c13fa73}\label{interfaceGuzzleHttp_1_1ClientInterface_a40c0034ad49feaeecc802d782c13fa73}} 
+const {\bfseries V\+E\+R\+S\+I\+ON} = \textquotesingle{}6.\+3.\+3\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classGuzzleHttp_1_1Client}{Client} interface for sending H\+T\+TP requests. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1ClientInterface_a6d7e09251742f6a1227bd4abce2106e5}\label{interfaceGuzzleHttp_1_1ClientInterface_a6d7e09251742f6a1227bd4abce2106e5}} 
+\index{Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}!get\+Config@{get\+Config}}
+\index{get\+Config@{get\+Config}!Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}}
+\subsubsection{\texorpdfstring{get\+Config()}{getConfig()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Client\+Interface\+::get\+Config (\begin{DoxyParamCaption}\item[{}]{\$option = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Get a client configuration option.
+
+These options include default request options of the client, a \char`\"{}handler\char`\"{} (if utilized by the concrete client), and a \char`\"{}base\+\_\+uri\char`\"{} if utilized by the concrete client.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$option} & The config option to retrieve.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Client_a59c5b1700f8222c52f8c55301502b462}{Guzzle\+Http\textbackslash{}\+Client}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1ClientInterface_a959a9c53eb4f138e1480e8e8b20ee71d}\label{interfaceGuzzleHttp_1_1ClientInterface_a959a9c53eb4f138e1480e8e8b20ee71d}} 
+\index{Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}!request@{request}}
+\index{request@{request}!Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}}
+\subsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Client\+Interface\+::request (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$uri,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Create and send an H\+T\+TP request.
+
+Use an absolute path to override the base path of the client, or a relative path to append to the base path of the client. The U\+RL can contain the query string as well.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & H\+T\+TP method. \\
+\hline
+string | Uri\+Interface & {\em \$uri} & U\+RI object or string. \\
+\hline
+array & {\em \$options} & Request options to apply.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response\+Interface 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Guzzle\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Client_ad52e7b46c3bd1fdf5acef6e13eef9dc0}{Guzzle\+Http\textbackslash{}\+Client}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1ClientInterface_a3c5841834717706fbb7e1da2117d7d0c}\label{interfaceGuzzleHttp_1_1ClientInterface_a3c5841834717706fbb7e1da2117d7d0c}} 
+\index{Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}!request\+Async@{request\+Async}}
+\index{request\+Async@{request\+Async}!Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}}
+\subsubsection{\texorpdfstring{request\+Async()}{requestAsync()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Client\+Interface\+::request\+Async (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$uri,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Create and send an asynchronous H\+T\+TP request.
+
+Use an absolute path to override the base path of the client, or a relative path to append to the base path of the client. The U\+RL can contain the query string as well. Use an array to provide a U\+RL template and additional variables to use in the U\+RL template expansion.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & H\+T\+TP method \\
+\hline
+string | Uri\+Interface & {\em \$uri} & U\+RI object or string. \\
+\hline
+array & {\em \$options} & Request options to apply.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise\+Interface 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Client_a6161f62e1d78c93095980ba74011efde}{Guzzle\+Http\textbackslash{}\+Client}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1ClientInterface_a9a40e2f110ba4eb0a8a7a7a022860043}\label{interfaceGuzzleHttp_1_1ClientInterface_a9a40e2f110ba4eb0a8a7a7a022860043}} 
+\index{Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}!send@{send}}
+\index{send@{send}!Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Client\+Interface\+::send (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface}}]{\$request,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Send an H\+T\+TP request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to send \\
+\hline
+array & {\em \$options} & Request options to apply to the given request and to the transfer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response\+Interface 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Guzzle\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Client_a0d09714385bf54670972cc6b8ad3d3e8}{Guzzle\+Http\textbackslash{}\+Client}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1ClientInterface_ab96c38a486e346582ab945ba74d1625a}\label{interfaceGuzzleHttp_1_1ClientInterface_ab96c38a486e346582ab945ba74d1625a}} 
+\index{Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}!send\+Async@{send\+Async}}
+\index{send\+Async@{send\+Async}!Guzzle\+Http\+::\+Client\+Interface@{Guzzle\+Http\+::\+Client\+Interface}}
+\subsubsection{\texorpdfstring{send\+Async()}{sendAsync()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Client\+Interface\+::send\+Async (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface}}]{\$request,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Asynchronously send an H\+T\+TP request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to send \\
+\hline
+array & {\em \$options} & Request options to apply to the given request and to the transfer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise\+Interface 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Client_aa88ec3b9637d704e99c4238afea8b738}{Guzzle\+Http\textbackslash{}\+Client}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/guzzle/src/Client\+Interface.\+php\end{DoxyCompactItemize}

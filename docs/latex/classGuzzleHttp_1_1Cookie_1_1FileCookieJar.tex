@@ -1,0 +1,80 @@
+\hypertarget{classGuzzleHttp_1_1Cookie_1_1FileCookieJar}{}\section{Guzzle\+Http\textbackslash{}Cookie\textbackslash{}File\+Cookie\+Jar Class Reference}
+\label{classGuzzleHttp_1_1Cookie_1_1FileCookieJar}\index{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+File\+Cookie\+Jar@{Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+File\+Cookie\+Jar}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Cookie\textbackslash{}File\+Cookie\+Jar\+:
+% FIG 0
+
+
+Collaboration diagram for Guzzle\+Http\textbackslash{}Cookie\textbackslash{}File\+Cookie\+Jar\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1FileCookieJar_a8de6441aa65bb7239b937fa4a5a86ac9}{\+\_\+\+\_\+construct} (\$cookie\+File, \$store\+Session\+Cookies=false)
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1FileCookieJar_ab59b406349779cc58e08597041470c65}{\+\_\+\+\_\+destruct} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Cookie_1_1FileCookieJar_a32ce9367ac7ec7f7f2d9e50dfba6496b}{load} (\$filename)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Persists non-\/session cookies using a J\+S\+ON formatted file 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1FileCookieJar_a8de6441aa65bb7239b937fa4a5a86ac9}\label{classGuzzleHttp_1_1Cookie_1_1FileCookieJar_a8de6441aa65bb7239b937fa4a5a86ac9}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+File\+Cookie\+Jar\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$cookie\+File,  }\item[{}]{\$store\+Session\+Cookies = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Create a new \hyperlink{classGuzzleHttp_1_1Cookie_1_1FileCookieJar}{File\+Cookie\+Jar} object
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$cookie\+File} & File to store the cookie data \\
+\hline
+bool & {\em \$store\+Session\+Cookies} & Set to true to store session cookies in the cookie jar.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1FileCookieJar_ab59b406349779cc58e08597041470c65}\label{classGuzzleHttp_1_1Cookie_1_1FileCookieJar_ab59b406349779cc58e08597041470c65}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar}!\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}}
+\index{\+\_\+\+\_\+destruct@{\+\_\+\+\_\+destruct}!Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+File\+Cookie\+Jar\+::\+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saves the file when shutting down 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Cookie_1_1FileCookieJar_a32ce9367ac7ec7f7f2d9e50dfba6496b}\label{classGuzzleHttp_1_1Cookie_1_1FileCookieJar_a32ce9367ac7ec7f7f2d9e50dfba6496b}} 
+\index{Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar}!load@{load}}
+\index{load@{load}!Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar@{Guzzle\+Http\+::\+Cookie\+::\+File\+Cookie\+Jar}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Cookie\textbackslash{}\+File\+Cookie\+Jar\+::load (\begin{DoxyParamCaption}\item[{}]{\$filename }\end{DoxyParamCaption})}
+
+Load cookies from a J\+S\+ON formatted file.
+
+Old cookies are kept unless overwritten by newly loaded ones.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filename} & Cookie file to load. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/guzzle/src/\+Cookie/File\+Cookie\+Jar.\+php\end{DoxyCompactItemize}

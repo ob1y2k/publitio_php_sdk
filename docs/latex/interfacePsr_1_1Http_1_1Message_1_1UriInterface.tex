@@ -1,0 +1,500 @@
+\hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{}\section{Psr\textbackslash{}Http\textbackslash{}Message\textbackslash{}Uri\+Interface Interface Reference}
+\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface}\index{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface@{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface}}
+
+
+Inheritance diagram for Psr\textbackslash{}Http\textbackslash{}Message\textbackslash{}Uri\+Interface\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a12b7d87a6b448aaf0cb4978029dc5ecc}{get\+Scheme} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a2c32fd7d98677e1fb5d31d6d24ad937a}{get\+Authority} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa19d2f6ab55d87aa607bfca6995f9923}{get\+User\+Info} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a5dbe0ede7395fd19fca8fafe023aa285}{get\+Host} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa6738a90dce8e99c3b0fc6a73f34cd62}{get\+Port} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa50072ff08f6acf7c35aa5ebd0ae91cd}{get\+Path} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a859c8c892d038ba2f1a92b1dfa806ecc}{get\+Query} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a95df80b1a48010817c8c135ef5d9d5b1}{get\+Fragment} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_af1eb8a046537a32fe08bc90f6debb9c6}{with\+Scheme} (\$scheme)
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aeee034680ed8e5066fb6b2c671a2005f}{with\+User\+Info} (\$user, \$password=null)
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a464c2a4012d692b96500ff4eca7e3cb1}{with\+Host} (\$host)
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aed81cb605b9bec89404a78ff550125a5}{with\+Port} (\$port)
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a9d2a8bda965816471ea40e3560d710ca}{with\+Path} (\$path)
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a66f1ac4196c69ab824c408e2d6e89b10}{with\+Query} (\$query)
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a637020abdaa77e0c60a2377172395bf1}{with\+Fragment} (\$fragment)
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a322566ef8139a72e4a3da1feffafb1e6}{\+\_\+\+\_\+to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Value object representing a U\+RI.
+
+This interface is meant to represent U\+R\+Is according to R\+FC 3986 and to provide methods for most common operations. Additional functionality for working with U\+R\+Is can be provided on top of the interface or externally. Its primary use is for H\+T\+TP requests, but may also be used in other contexts.
+
+Instances of this interface are considered immutable; all methods that might change state M\+U\+ST be implemented such that they retain the internal state of the current instance and return an instance that contains the changed state.
+
+Typically the Host header will be also be present in the request message. For server-\/side requests, the scheme will typically be discoverable in the server parameters.
+
+\hyperlink{}{(the U\+RI specification) }
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a322566ef8139a72e4a3da1feffafb1e6}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a322566ef8139a72e4a3da1feffafb1e6}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!\+\_\+\+\_\+to\+String@{\+\_\+\+\_\+to\+String}}
+\index{\+\_\+\+\_\+to\+String@{\+\_\+\+\_\+to\+String}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+to\+String()}{\_\_toString()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::\+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the string representation as a U\+RI reference.
+
+Depending on which components of the U\+RI are present, the resulting string is either a full U\+RI or relative reference according to R\+FC 3986, Section 4.\+1. The method concatenates the various components of the U\+RI, using the appropriate delimiters\+:
+
+
+\begin{DoxyItemize}
+\item If a scheme is present, it M\+U\+ST be suffixed by \char`\"{}\+:\char`\"{}.
+\item If an authority is present, it M\+U\+ST be prefixed by \char`\"{}//\char`\"{}.
+\item The path can be concatenated without delimiters. But there are two cases where the path has to be adjusted to make the U\+RI reference valid as P\+HP does not allow to throw an exception in \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a322566ef8139a72e4a3da1feffafb1e6}{\+\_\+\+\_\+to\+String()}\+:
+\begin{DoxyItemize}
+\item If the path is rootless and an authority is present, the path M\+U\+ST be prefixed by \char`\"{}/\char`\"{}.
+\item If the path is starting with more than one \char`\"{}/\char`\"{} and no authority is present, the starting slashes M\+U\+ST be reduced to one.
+\end{DoxyItemize}
+\item If a query is present, it M\+U\+ST be prefixed by \char`\"{}?\char`\"{}.
+\item If a fragment is present, it M\+U\+ST be prefixed by \char`\"{}\#\char`\"{}.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\href{http://tools.ietf.org/html/rfc3986#section-4.1}{\tt http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/4.\+1} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a98b6fcc3c3be3fb070fcb95fec762e7f}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a2c32fd7d98677e1fb5d31d6d24ad937a}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a2c32fd7d98677e1fb5d31d6d24ad937a}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!get\+Authority@{get\+Authority}}
+\index{get\+Authority@{get\+Authority}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{get\+Authority()}{getAuthority()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::get\+Authority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the authority component of the U\+RI.
+
+If no authority information is present, this method M\+U\+ST return an empty string.
+
+The authority syntax of the U\+RI is\+:
+
+
+\begin{DoxyPre}
+[user-info@]host[:port]
+\end{DoxyPre}
+
+
+If the port component is not set or is the standard port for the current scheme, it S\+H\+O\+U\+LD N\+OT be included.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986#section-3.2}{\tt https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+2} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string The U\+RI authority, in \char`\"{}\mbox{[}user-\/info@\mbox{]}host\mbox{[}\+:port\mbox{]}\char`\"{} format. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a242d836c28cb339c59d64d704a30b7e1}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a95df80b1a48010817c8c135ef5d9d5b1}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a95df80b1a48010817c8c135ef5d9d5b1}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!get\+Fragment@{get\+Fragment}}
+\index{get\+Fragment@{get\+Fragment}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{get\+Fragment()}{getFragment()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::get\+Fragment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the fragment component of the U\+RI.
+
+If no fragment is present, this method M\+U\+ST return an empty string.
+
+The leading \char`\"{}\#\char`\"{} character is not part of the fragment and M\+U\+ST N\+OT be added.
+
+The value returned M\+U\+ST be percent-\/encoded, but M\+U\+ST N\+OT double-\/encode any characters. To determine what characters to encode, please refer to R\+FC 3986, Sections 2 and 3.\+5.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986#section-2}{\tt https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/2} 
+
+\href{https://tools.ietf.org/html/rfc3986#section-3.5}{\tt https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+5} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string The U\+RI fragment. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_aeda26bc60e5aef6d506ce43be28409ca}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a5dbe0ede7395fd19fca8fafe023aa285}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a5dbe0ede7395fd19fca8fafe023aa285}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!get\+Host@{get\+Host}}
+\index{get\+Host@{get\+Host}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{get\+Host()}{getHost()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the host component of the U\+RI.
+
+If no host is present, this method M\+U\+ST return an empty string.
+
+The value returned M\+U\+ST be normalized to lowercase, per R\+FC 3986 Section 3.\+2.\+2.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://tools.ietf.org/html/rfc3986#section-3.2.2}{\tt http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+2.\+2} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string The U\+RI host. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a77cd782c426d48880a457a0a54c46d5d}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa50072ff08f6acf7c35aa5ebd0ae91cd}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa50072ff08f6acf7c35aa5ebd0ae91cd}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!get\+Path@{get\+Path}}
+\index{get\+Path@{get\+Path}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{get\+Path()}{getPath()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the path component of the U\+RI.
+
+The path can either be empty or absolute (starting with a slash) or rootless (not starting with a slash). Implementations M\+U\+ST support all three syntaxes.
+
+Normally, the empty path \char`\"{}\char`\"{} and absolute path \char`\"{}/\char`\"{} are considered equal as defined in R\+FC 7230 Section 2.\+7.\+3. But this method M\+U\+ST N\+OT automatically do this normalization because in contexts with a trimmed base path, e.\+g. the front controller, this difference becomes significant. It\textquotesingle{}s the task of the user to handle both \char`\"{}\char`\"{} and \char`\"{}/\char`\"{}.
+
+The value returned M\+U\+ST be percent-\/encoded, but M\+U\+ST N\+OT double-\/encode any characters. To determine what characters to encode, please refer to R\+FC 3986, Sections 2 and 3.\+3.
+
+As an example, if the value should include a slash (\char`\"{}/\char`\"{}) not intended as delimiter between path segments, that value M\+U\+ST be passed in encoded form (e.\+g., \char`\"{}\%2\+F\char`\"{}) to the instance.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986#section-2}{\tt https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/2} 
+
+\href{https://tools.ietf.org/html/rfc3986#section-3.3}{\tt https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+3} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string The U\+RI path. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a063016fa7af70993d74f3c4efa4e9246}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa6738a90dce8e99c3b0fc6a73f34cd62}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa6738a90dce8e99c3b0fc6a73f34cd62}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{get\+Port()}{getPort()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the port component of the U\+RI.
+
+If a port is present, and it is non-\/standard for the current scheme, this method M\+U\+ST return it as an integer. If the port is the standard port used with the current scheme, this method S\+H\+O\+U\+LD return null.
+
+If no port is present, and no scheme is present, this method M\+U\+ST return a null value.
+
+If no port is present, but a scheme is present, this method M\+AY return the standard port for that scheme, but S\+H\+O\+U\+LD return null.
+
+\begin{DoxyReturn}{Returns}
+null$\vert$int The U\+RI port. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_abea314869a6934b7675dd516c72715f9}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a859c8c892d038ba2f1a92b1dfa806ecc}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a859c8c892d038ba2f1a92b1dfa806ecc}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!get\+Query@{get\+Query}}
+\index{get\+Query@{get\+Query}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{get\+Query()}{getQuery()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::get\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the query string of the U\+RI.
+
+If no query string is present, this method M\+U\+ST return an empty string.
+
+The leading \char`\"{}?\char`\"{} character is not part of the query and M\+U\+ST N\+OT be added.
+
+The value returned M\+U\+ST be percent-\/encoded, but M\+U\+ST N\+OT double-\/encode any characters. To determine what characters to encode, please refer to R\+FC 3986, Sections 2 and 3.\+4.
+
+As an example, if a value in a key/value pair of the query string should include an ampersand (\char`\"{}\&\char`\"{}) not intended as a delimiter between values, that value M\+U\+ST be passed in encoded form (e.\+g., \char`\"{}\%26\char`\"{}) to the instance.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986#section-2}{\tt https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/2} 
+
+\href{https://tools.ietf.org/html/rfc3986#section-3.4}{\tt https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+4} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string The U\+RI query string. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a67650b5b4d619cb30e2951da11d0f369}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a12b7d87a6b448aaf0cb4978029dc5ecc}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a12b7d87a6b448aaf0cb4978029dc5ecc}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!get\+Scheme@{get\+Scheme}}
+\index{get\+Scheme@{get\+Scheme}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{get\+Scheme()}{getScheme()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::get\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the scheme component of the U\+RI.
+
+If no scheme is present, this method M\+U\+ST return an empty string.
+
+The value returned M\+U\+ST be normalized to lowercase, per R\+FC 3986 Section 3.\+1.
+
+The trailing \char`\"{}\+:\char`\"{} character is not part of the scheme and M\+U\+ST N\+OT be added.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986#section-3.1}{\tt https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+1} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string The U\+RI scheme. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a3357bfcc071b00cecace2fa086bea14a}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa19d2f6ab55d87aa607bfca6995f9923}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa19d2f6ab55d87aa607bfca6995f9923}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!get\+User\+Info@{get\+User\+Info}}
+\index{get\+User\+Info@{get\+User\+Info}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{get\+User\+Info()}{getUserInfo()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::get\+User\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the user information component of the U\+RI.
+
+If no user information is present, this method M\+U\+ST return an empty string.
+
+If a user is present in the U\+RI, this will return that value; additionally, if the password is also present, it will be appended to the user value, with a colon (\char`\"{}\+:\char`\"{}) separating the values.
+
+The trailing \char`\"{}@\char`\"{} character is not part of the user information and M\+U\+ST N\+OT be added.
+
+\begin{DoxyReturn}{Returns}
+string The U\+RI user information, in \char`\"{}username\mbox{[}\+:password\mbox{]}\char`\"{} format. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_aabfb1fcf87f211fc73783d99adf09c8e}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a637020abdaa77e0c60a2377172395bf1}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a637020abdaa77e0c60a2377172395bf1}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!with\+Fragment@{with\+Fragment}}
+\index{with\+Fragment@{with\+Fragment}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{with\+Fragment()}{withFragment()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::with\+Fragment (\begin{DoxyParamCaption}\item[{}]{\$fragment }\end{DoxyParamCaption})}
+
+Return an instance with the specified U\+RI fragment.
+
+This method M\+U\+ST retain the state of the current instance, and return an instance that contains the specified U\+RI fragment.
+
+Users can provide both encoded and decoded fragment characters. Implementations ensure the correct encoding as outlined in \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a95df80b1a48010817c8c135ef5d9d5b1}{get\+Fragment()}.
+
+An empty fragment value is equivalent to removing the fragment.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$fragment} & The fragment to use with the new instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static A new instance with the specified fragment. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a4989797bf5e76f44e5c2c1332ea5a7ec}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a464c2a4012d692b96500ff4eca7e3cb1}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a464c2a4012d692b96500ff4eca7e3cb1}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!with\+Host@{with\+Host}}
+\index{with\+Host@{with\+Host}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{with\+Host()}{withHost()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::with\+Host (\begin{DoxyParamCaption}\item[{}]{\$host }\end{DoxyParamCaption})}
+
+Return an instance with the specified host.
+
+This method M\+U\+ST retain the state of the current instance, and return an instance that contains the specified host.
+
+An empty host value is equivalent to removing the host.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$host} & The hostname to use with the new instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static A new instance with the specified host. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a6676d1155c9a628ff53a1d18795a4b6c}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a9d2a8bda965816471ea40e3560d710ca}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a9d2a8bda965816471ea40e3560d710ca}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!with\+Path@{with\+Path}}
+\index{with\+Path@{with\+Path}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{with\+Path()}{withPath()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::with\+Path (\begin{DoxyParamCaption}\item[{}]{\$path }\end{DoxyParamCaption})}
+
+Return an instance with the specified path.
+
+This method M\+U\+ST retain the state of the current instance, and return an instance that contains the specified path.
+
+The path can either be empty or absolute (starting with a slash) or rootless (not starting with a slash). Implementations M\+U\+ST support all three syntaxes.
+
+If the path is intended to be domain-\/relative rather than path relative then it must begin with a slash (\char`\"{}/\char`\"{}). Paths not starting with a slash (\char`\"{}/\char`\"{}) are assumed to be relative to some base path known to the application or consumer.
+
+Users can provide both encoded and decoded path characters. Implementations ensure the correct encoding as outlined in \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aa50072ff08f6acf7c35aa5ebd0ae91cd}{get\+Path()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & The path to use with the new instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static A new instance with the specified path. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a80fdae1020f7a4bd60cc8f117a8966e3}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aed81cb605b9bec89404a78ff550125a5}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aed81cb605b9bec89404a78ff550125a5}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!with\+Port@{with\+Port}}
+\index{with\+Port@{with\+Port}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{with\+Port()}{withPort()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::with\+Port (\begin{DoxyParamCaption}\item[{}]{\$port }\end{DoxyParamCaption})}
+
+Return an instance with the specified port.
+
+This method M\+U\+ST retain the state of the current instance, and return an instance that contains the specified port.
+
+Implementations M\+U\+ST raise an exception for ports outside the established T\+CP and U\+DP port ranges.
+
+A null value provided for the port is equivalent to removing the port information.
+
+
+\begin{DoxyParams}[1]{Parameters}
+null | int & {\em \$port} & The port to use with the new instance; a null value removes the port information. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static A new instance with the specified port. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_af06111c4b19c09ce8f1902b803016950}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a66f1ac4196c69ab824c408e2d6e89b10}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a66f1ac4196c69ab824c408e2d6e89b10}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!with\+Query@{with\+Query}}
+\index{with\+Query@{with\+Query}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{with\+Query()}{withQuery()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::with\+Query (\begin{DoxyParamCaption}\item[{}]{\$query }\end{DoxyParamCaption})}
+
+Return an instance with the specified query string.
+
+This method M\+U\+ST retain the state of the current instance, and return an instance that contains the specified query string.
+
+Users can provide both encoded and decoded query characters. Implementations ensure the correct encoding as outlined in \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface_a859c8c892d038ba2f1a92b1dfa806ecc}{get\+Query()}.
+
+An empty query string value is equivalent to removing the query string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & The query string to use with the new instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static A new instance with the specified query string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_a7b73f53c542c9508b14d5f002699560e}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_af1eb8a046537a32fe08bc90f6debb9c6}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_af1eb8a046537a32fe08bc90f6debb9c6}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!with\+Scheme@{with\+Scheme}}
+\index{with\+Scheme@{with\+Scheme}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{with\+Scheme()}{withScheme()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::with\+Scheme (\begin{DoxyParamCaption}\item[{}]{\$scheme }\end{DoxyParamCaption})}
+
+Return an instance with the specified scheme.
+
+This method M\+U\+ST retain the state of the current instance, and return an instance that contains the specified scheme.
+
+Implementations M\+U\+ST support the schemes \char`\"{}http\char`\"{} and \char`\"{}https\char`\"{} case insensitively, and M\+AY accommodate other schemes if required.
+
+An empty scheme is equivalent to removing the scheme.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$scheme} & The scheme to use with the new instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static A new instance with the specified scheme. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_aca8720e1011bf77b98a02b47fb4b3c12}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aeee034680ed8e5066fb6b2c671a2005f}\label{interfacePsr_1_1Http_1_1Message_1_1UriInterface_aeee034680ed8e5066fb6b2c671a2005f}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}!with\+User\+Info@{with\+User\+Info}}
+\index{with\+User\+Info@{with\+User\+Info}!Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uri\+Interface}}
+\subsubsection{\texorpdfstring{with\+User\+Info()}{withUserInfo()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uri\+Interface\+::with\+User\+Info (\begin{DoxyParamCaption}\item[{}]{\$user,  }\item[{}]{\$password = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Return an instance with the specified user information.
+
+This method M\+U\+ST retain the state of the current instance, and return an instance that contains the specified user information.
+
+Password is optional, but the user information M\+U\+ST include the user; an empty string for the user is equivalent to removing user information.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$user} & The user name to use for authority. \\
+\hline
+null | string & {\em \$password} & The password associated with \$user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static A new instance with the specified user information. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri_aeb03c98c387f104b68a93dac0ab047e8}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/psr/http-\/message/src/Uri\+Interface.\+php\end{DoxyCompactItemize}

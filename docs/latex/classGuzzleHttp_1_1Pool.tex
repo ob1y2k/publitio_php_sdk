@@ -1,0 +1,106 @@
+\hypertarget{classGuzzleHttp_1_1Pool}{}\section{Guzzle\+Http\textbackslash{}Pool Class Reference}
+\label{classGuzzleHttp_1_1Pool}\index{Guzzle\+Http\textbackslash{}\+Pool@{Guzzle\+Http\textbackslash{}\+Pool}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Pool\+:
+% FIG 0
+
+
+Collaboration diagram for Guzzle\+Http\textbackslash{}Pool\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGuzzleHttp_1_1Pool_a46a250ec314905753f79759808b8ae59}{\+\_\+\+\_\+construct} (\hyperlink{interfaceGuzzleHttp_1_1ClientInterface}{Client\+Interface} \$client, \$requests, array \$config=\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{classGuzzleHttp_1_1Pool_a560fb5c3929b5d33fa6cc830c1dc1382}{promise} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGuzzleHttp_1_1Pool_a819335632a3ef0763094b31e9c39c640}{batch} (\hyperlink{interfaceGuzzleHttp_1_1ClientInterface}{Client\+Interface} \$client, \$requests, array \$options=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sends and iterator of requests concurrently using a capped pool size.
+
+The pool will read from an iterator until it is cancelled or until the iterator is consumed. When a request is yielded, the request is sent after applying the \char`\"{}request\+\_\+options\char`\"{} request options (if provided in the ctor).
+
+When a function is yielded by the iterator, the function is provided the \char`\"{}request\+\_\+options\char`\"{} array that should be merged on top of any existing options, and the function M\+U\+ST then return a wait-\/able promise. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Pool_a46a250ec314905753f79759808b8ae59}\label{classGuzzleHttp_1_1Pool_a46a250ec314905753f79759808b8ae59}} 
+\index{Guzzle\+Http\+::\+Pool@{Guzzle\+Http\+::\+Pool}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Guzzle\+Http\+::\+Pool@{Guzzle\+Http\+::\+Pool}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Pool\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\hyperlink{interfaceGuzzleHttp_1_1ClientInterface}{Client\+Interface}}]{\$client,  }\item[{}]{\$requests,  }\item[{array}]{\$config = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{interfaceGuzzleHttp_1_1ClientInterface}{Client\+Interface} & {\em \$client} & \hyperlink{classGuzzleHttp_1_1Client}{Client} used to send the requests. \\
+\hline
+array | \textbackslash{}\+Iterator & {\em \$requests} & Requests or functions that return requests to send concurrently. \\
+\hline
+array & {\em \$config} & Associative array of options
+\begin{DoxyItemize}
+\item concurrency\+: (int) Maximum number of requests to send concurrently
+\item options\+: Array of request options to apply to each request.
+\item fulfilled\+: (callable) Function to invoke when a request completes.
+\item rejected\+: (callable) Function to invoke when a request is rejected. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Pool_a819335632a3ef0763094b31e9c39c640}\label{classGuzzleHttp_1_1Pool_a819335632a3ef0763094b31e9c39c640}} 
+\index{Guzzle\+Http\+::\+Pool@{Guzzle\+Http\+::\+Pool}!batch@{batch}}
+\index{batch@{batch}!Guzzle\+Http\+::\+Pool@{Guzzle\+Http\+::\+Pool}}
+\subsubsection{\texorpdfstring{batch()}{batch()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Pool\+::batch (\begin{DoxyParamCaption}\item[{\hyperlink{interfaceGuzzleHttp_1_1ClientInterface}{Client\+Interface}}]{\$client,  }\item[{}]{\$requests,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sends multiple requests concurrently and returns an array of responses and exceptions that uses the same ordering as the provided requests.
+
+I\+M\+P\+O\+R\+T\+A\+NT\+: This method keeps every request and response in memory, and as such, is N\+OT recommended when sending a large number or an indeterminate number of requests concurrently.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\hyperlink{interfaceGuzzleHttp_1_1ClientInterface}{Client\+Interface} & {\em \$client} & \hyperlink{classGuzzleHttp_1_1Client}{Client} used to send the requests \\
+\hline
+array | \textbackslash{}\+Iterator & {\em \$requests} & Requests to send concurrently. \\
+\hline
+array & {\em \$options} & Passes through the options available in \{\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Guzzle\+Http\+::\+\_\+\+\_\+construct\}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+array Returns an array containing the response or an exception in the same order that the requests were sent. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Pool_a560fb5c3929b5d33fa6cc830c1dc1382}\label{classGuzzleHttp_1_1Pool_a560fb5c3929b5d33fa6cc830c1dc1382}} 
+\index{Guzzle\+Http\+::\+Pool@{Guzzle\+Http\+::\+Pool}!promise@{promise}}
+\index{promise@{promise}!Guzzle\+Http\+::\+Pool@{Guzzle\+Http\+::\+Pool}}
+\subsubsection{\texorpdfstring{promise()}{promise()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Pool\+::promise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a promise.
+
+\begin{DoxyReturn}{Returns}
+Promise\+Interface 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromisorInterface_a228085a17057d886d5486c7c433be879}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promisor\+Interface}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/guzzle/src/Pool.\+php\end{DoxyCompactItemize}

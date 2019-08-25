@@ -164,7 +164,7 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$VERSION</b> = '2.0
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Make an API call. For a list of avaliable calls, see <a href="https://publit.io/docs">https://publit.io/docs</a>. Use this method when you aren't going to be uploading any files with the call. If you wish to upload a file, use the uploadFile or uploadRemoteFile methods.</p>
+<p>Make an API call. For a list of avaliable calls, see <a href="https://publit.io/docs">https://publit.io/docs</a>. Use this method when you aren't going to be uploading any files with the call. If you wish to upload a file, use the <code>uploadFile</code> or <code>uploadRemoteFile</code> methods.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$call_url</td><td>The API call endpoint, for example '/files/list'. </td></tr>
@@ -173,10 +173,10 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$VERSION</b> = '2.0
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>object The response JSON parsed using json_decode. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>object The response JSON parsed using <code>json_decode</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classPublitio_1_1BadJSONResponse.html" title="This exception is thrown when the server responds with incorrectly formatted JSON. ">BadJSONResponse</a></td><td>when the server returns an invalid JSON reponse. Note: if the server is returning an invalid JSON response it is likely that $call_url is invalid, or perhaps there is an internal server error. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classPublitio_1_1BadJSONResponse.html" title="This exception is thrown when the server responds with incorrectly formatted JSON. ">BadJSONResponse</a></td><td>when the server returns an invalid JSON reponse. Note: if the server is returning an invalid JSON response it is likely that <code>$call_url</code> is invalid, or perhaps there is an internal server error. </td></tr>
   </table>
   </dd>
 </dl>
@@ -214,19 +214,19 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$VERSION</b> = '2.0
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Upload a file. Use this method when uploading local files from memory. If you wish to upload a file using a remote URL, use uploadRemoteFile.</p>
+<p>Upload a file. Use this method when uploading local files from memory. If you wish to upload a file using a remote URL, use <code>uploadRemoteFile</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">mixed</td><td class="paramname">$file</td><td>Pass a string to upload the contents of the string, pass an fopen resource to upload the contents of a PHP stream, or pass a Psr\Http\Message\StreamInterface to upload the contents of a PSR-7 stream. </td></tr>
-    <tr><td class="paramtype">string</td><td class="paramname">$action</td><td>Can be 'file' or 'watermark'. If $action is 'file', this method will upload a file to the Publitio server. If $action is 'watermark', this method will upload a watermark to the server. If $action is anything else, an Exception will be thrown. </td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$file</td><td>Pass a string to upload the contents of the string, pass an <code>fopen</code> resource to upload the contents of a PHP stream, or pass a <code>Psr\Http\Message\StreamInterface</code> to upload the contents of a PSR-7 stream. </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$action</td><td>Can be 'file' or 'watermark'. If <code>$action</code> is 'file', this method will upload a file to the Publitio server. If <code>$action</code> is 'watermark', this method will upload a watermark to the server. If <code>$action</code> is anything else, an <code>Exception</code> will be thrown. </td></tr>
     <tr><td class="paramtype">array</td><td class="paramname">$args</td><td>The URL query parameters. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>object The response JSON parsed using json_decode($response_body). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>object The response JSON parsed using <code>json_decode</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Exception</td><td>when $action is invalid. </td></tr>
+    <tr><td class="paramname">Exception</td><td>when <code>$action</code> is invalid. </td></tr>
     <tr><td class="paramname"><a class="el" href="classPublitio_1_1BadJSONResponse.html" title="This exception is thrown when the server responds with incorrectly formatted JSON. ">BadJSONResponse</a></td><td>when the server responds with invalid JSON. This might be due to an internal server error. </td></tr>
   </table>
   </dd>
@@ -265,19 +265,19 @@ static&#160;</td><td class="memItemRight" valign="bottom"><b>$VERSION</b> = '2.0
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Upload the file at URL $remote_url to the server. If you need to upload a file from memory instead, use uploadFile.</p>
+<p>Upload the file at URL <code>$remote_url</code> to the server. If you need to upload a file from memory instead, use <code>uploadFile</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$remote_url</td><td>The URL of file to upload. </td></tr>
-    <tr><td class="paramtype">string</td><td class="paramname">$action</td><td>Can be 'file' or 'watermark'. If $action is 'file', this method will upload a file to the Publitio server. If $action is 'watermark', this method will upload a watermark to the server. If $action is anything else, an Exception will be thrown. </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$action</td><td>Can be 'file' or 'watermark'. If <code>$action</code> is 'file', this method will upload a file to the Publitio server. If <code>$action</code> is 'watermark', this method will upload a watermark to the server. If <code>$action</code> is anything else, an <code>Exception</code> will be thrown. </td></tr>
     <tr><td class="paramtype">array</td><td class="paramname">$args</td><td>The URL query parameters. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>object The response JSON parsed using json_decode($response_body). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>object The response JSON parsed using <code>json_decode</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Exception</td><td>when $action is invalid. </td></tr>
+    <tr><td class="paramname">Exception</td><td>when <code>$action</code> is invalid. </td></tr>
     <tr><td class="paramname"><a class="el" href="classPublitio_1_1BadJSONResponse.html" title="This exception is thrown when the server responds with incorrectly formatted JSON. ">BadJSONResponse</a></td><td>when the server responds with invalid JSON. This might be due to an internal server error. </td></tr>
   </table>
   </dd>

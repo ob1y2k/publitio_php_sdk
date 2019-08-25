@@ -1,0 +1,8 @@
+digraph "Psr\Http\Message\UploadedFileInterface"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="Psr\\Http\\Message\\Uploaded\lFileInterface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="GuzzleHttp\\Psr7\\UploadedFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Psr7_1_1UploadedFile.html"];
+}

@@ -1,0 +1,91 @@
+\hypertarget{classGuzzleHttp_1_1Psr7_1_1UriResolver}{}\section{Guzzle\+Http\textbackslash{}Psr7\textbackslash{}Uri\+Resolver Class Reference}
+\label{classGuzzleHttp_1_1Psr7_1_1UriResolver}\index{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Resolver@{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Resolver}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_a9a9fc1515e4db2b3fcb089190c04c731}{remove\+Dot\+Segments} (\$path)
+\item 
+static \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_aa92dccd83431979e6adbd2788af77941}{resolve} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface} \$base, \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface} \$rel)
+\item 
+static \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_a4e010e1e3e5349f75704445456c549da}{relativize} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface} \$base, \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface} \$target)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Resolves a U\+RI reference in the context of a base U\+RI and the opposite way.
+
+\begin{DoxyAuthor}{Author}
+Tobias Schultze
+\end{DoxyAuthor}
+\hyperlink{}{https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/5}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriResolver_a4e010e1e3e5349f75704445456c549da}\label{classGuzzleHttp_1_1Psr7_1_1UriResolver_a4e010e1e3e5349f75704445456c549da}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver}!relativize@{relativize}}
+\index{relativize@{relativize}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver}}
+\subsubsection{\texorpdfstring{relativize()}{relativize()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Resolver\+::relativize (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface}}]{\$base,  }\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface}}]{\$target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the target U\+RI as a relative reference from the base U\+RI.
+
+This method is the counterpart to \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_aa92dccd83431979e6adbd2788af77941}{resolve()}\+:
+
+(string) \$target === (string) \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_aa92dccd83431979e6adbd2788af77941}{Uri\+Resolver\+::resolve}(\$base, \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_a4e010e1e3e5349f75704445456c549da}{Uri\+Resolver\+::relativize}(\$base, \$target))
+
+One use-\/case is to use the current request U\+RI as base U\+RI and then generate relative links in your documents to reduce the document size or offer self-\/contained downloadable document archives.
+
+\$base = new \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri}{Uri}(\textquotesingle{}\href{http://example.com/a/b/'}{\tt http\+://example.\+com/a/b/\textquotesingle{}}); echo \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_a4e010e1e3e5349f75704445456c549da}{Uri\+Resolver\+::relativize}(\$base, new \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri}{Uri}(\textquotesingle{}\href{http://example.com/a/b/c'}{\tt http\+://example.\+com/a/b/c\textquotesingle{}})); // prints \textquotesingle{}c\textquotesingle{}. echo \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_a4e010e1e3e5349f75704445456c549da}{Uri\+Resolver\+::relativize}(\$base, new \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri}{Uri}(\textquotesingle{}\href{http://example.com/a/x/y'}{\tt http\+://example.\+com/a/x/y\textquotesingle{}})); // prints \textquotesingle{}../x/y\textquotesingle{}. echo \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_a4e010e1e3e5349f75704445456c549da}{Uri\+Resolver\+::relativize}(\$base, new \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri}{Uri}(\textquotesingle{}\href{http://example.com/a/b/?q'}{\tt http\+://example.\+com/a/b/?q\textquotesingle{}})); // prints \textquotesingle{}?q\textquotesingle{}. echo \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_a4e010e1e3e5349f75704445456c549da}{Uri\+Resolver\+::relativize}(\$base, new \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri}{Uri}(\textquotesingle{}\href{http://example.org/a/b/'}{\tt http\+://example.\+org/a/b/\textquotesingle{}})); // prints \textquotesingle{}//example.org/a/b/\textquotesingle{}.
+
+This method also accepts a target that is already relative and will try to relativize it further. Only a relative-\/path reference will be returned as-\/is.
+
+echo \hyperlink{classGuzzleHttp_1_1Psr7_1_1UriResolver_a4e010e1e3e5349f75704445456c549da}{Uri\+Resolver\+::relativize}(\$base, new \hyperlink{classGuzzleHttp_1_1Psr7_1_1Uri}{Uri}(\textquotesingle{}/a/b/c\textquotesingle{})); // prints \textquotesingle{}c\textquotesingle{} as well
+
+
+\begin{DoxyParams}[1]{Parameters}
+Uri\+Interface & {\em \$base} & Base U\+RI \\
+\hline
+Uri\+Interface & {\em \$target} & Target U\+RI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uri\+Interface The relative U\+RI reference 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriResolver_a9a9fc1515e4db2b3fcb089190c04c731}\label{classGuzzleHttp_1_1Psr7_1_1UriResolver_a9a9fc1515e4db2b3fcb089190c04c731}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver}!remove\+Dot\+Segments@{remove\+Dot\+Segments}}
+\index{remove\+Dot\+Segments@{remove\+Dot\+Segments}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver}}
+\subsubsection{\texorpdfstring{remove\+Dot\+Segments()}{removeDotSegments()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Resolver\+::remove\+Dot\+Segments (\begin{DoxyParamCaption}\item[{}]{\$path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Removes dot segments from a path and returns the new path.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string \hyperlink{}{http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/5.\+2.\+4}
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1UriResolver_aa92dccd83431979e6adbd2788af77941}\label{classGuzzleHttp_1_1Psr7_1_1UriResolver_aa92dccd83431979e6adbd2788af77941}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver}!resolve@{resolve}}
+\index{resolve@{resolve}!Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver@{Guzzle\+Http\+::\+Psr7\+::\+Uri\+Resolver}}
+\subsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uri\+Resolver\+::resolve (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface}}]{\$base,  }\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UriInterface}{Uri\+Interface}}]{\$rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Converts the relative U\+RI into a new U\+RI that is resolved against the base U\+RI.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Uri\+Interface & {\em \$base} & Base U\+RI \\
+\hline
+Uri\+Interface & {\em \$rel} & Relative U\+RI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uri\+Interface \hyperlink{}{http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/5.\+2}
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/psr7/src/Uri\+Resolver.\+php\end{DoxyCompactItemize}

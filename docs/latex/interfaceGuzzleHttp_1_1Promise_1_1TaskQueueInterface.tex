@@ -1,0 +1,61 @@
+\hypertarget{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface}{}\section{Guzzle\+Http\textbackslash{}Promise\textbackslash{}Task\+Queue\+Interface Interface Reference}
+\label{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface}\index{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Task\+Queue\+Interface@{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Task\+Queue\+Interface}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Promise\textbackslash{}Task\+Queue\+Interface\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface_ac979f0b2e52a8ef6d9fc3cc751873d7b}{is\+Empty} ()
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface_a17ffca73eb81b58d2b5b17711563bf0b}{add} (callable \$task)
+\item 
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface_a237b20becf9d317b6092a8bc04ab27fc}{run} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface_a17ffca73eb81b58d2b5b17711563bf0b}\label{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface_a17ffca73eb81b58d2b5b17711563bf0b}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface}!add@{add}}
+\index{add@{add}!Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Task\+Queue\+Interface\+::add (\begin{DoxyParamCaption}\item[{callable}]{\$task }\end{DoxyParamCaption})}
+
+Adds a task to the queue that will be executed the next time run is called.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$task} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Promise_1_1TaskQueue_a6f14a0f54a9033aabd6e49b20e3749b3}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Task\+Queue}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface_ac979f0b2e52a8ef6d9fc3cc751873d7b}\label{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface_ac979f0b2e52a8ef6d9fc3cc751873d7b}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface}}
+\subsubsection{\texorpdfstring{is\+Empty()}{isEmpty()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Task\+Queue\+Interface\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns true if the queue is empty.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Promise_1_1TaskQueue_a4589829e74091b66d7b6aba06e6d38b8}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Task\+Queue}.
+
+\mbox{\Hypertarget{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface_a237b20becf9d317b6092a8bc04ab27fc}\label{interfaceGuzzleHttp_1_1Promise_1_1TaskQueueInterface_a237b20becf9d317b6092a8bc04ab27fc}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface}!run@{run}}
+\index{run@{run}!Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface@{Guzzle\+Http\+::\+Promise\+::\+Task\+Queue\+Interface}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Task\+Queue\+Interface\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Execute all of the pending task in the queue. 
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/promises/src/Task\+Queue\+Interface.\+php\end{DoxyCompactItemize}

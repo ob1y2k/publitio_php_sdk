@@ -1,0 +1,58 @@
+\hypertarget{classGuzzleHttp_1_1Handler_1_1Proxy}{}\section{Guzzle\+Http\textbackslash{}Handler\textbackslash{}Proxy Class Reference}
+\label{classGuzzleHttp_1_1Handler_1_1Proxy}\index{Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Proxy@{Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Proxy}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGuzzleHttp_1_1Handler_1_1Proxy_a788af0a41900ab50f18ed6756f783a32}{wrap\+Sync} (callable \$default, callable \$sync)
+\item 
+static \hyperlink{classGuzzleHttp_1_1Handler_1_1Proxy_a3eb17e0ee6eb5247132554a708d4949b}{wrap\+Streaming} (callable \$default, callable \$streaming)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides basic proxies for handlers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Handler_1_1Proxy_a3eb17e0ee6eb5247132554a708d4949b}\label{classGuzzleHttp_1_1Handler_1_1Proxy_a3eb17e0ee6eb5247132554a708d4949b}} 
+\index{Guzzle\+Http\+::\+Handler\+::\+Proxy@{Guzzle\+Http\+::\+Handler\+::\+Proxy}!wrap\+Streaming@{wrap\+Streaming}}
+\index{wrap\+Streaming@{wrap\+Streaming}!Guzzle\+Http\+::\+Handler\+::\+Proxy@{Guzzle\+Http\+::\+Handler\+::\+Proxy}}
+\subsubsection{\texorpdfstring{wrap\+Streaming()}{wrapStreaming()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Proxy\+::wrap\+Streaming (\begin{DoxyParamCaption}\item[{callable}]{\$default,  }\item[{callable}]{\$streaming }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sends streaming requests to a streaming compatible handler while sending all other requests to a default handler.
+
+This, for example, could be useful for taking advantage of the performance benefits of curl while still supporting true streaming through the \hyperlink{classGuzzleHttp_1_1Handler_1_1StreamHandler}{Stream\+Handler}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$default} & Handler used for non-\/streaming responses \\
+\hline
+callable & {\em \$streaming} & Handler used for streaming responses\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+callable Returns the composed handler. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Handler_1_1Proxy_a788af0a41900ab50f18ed6756f783a32}\label{classGuzzleHttp_1_1Handler_1_1Proxy_a788af0a41900ab50f18ed6756f783a32}} 
+\index{Guzzle\+Http\+::\+Handler\+::\+Proxy@{Guzzle\+Http\+::\+Handler\+::\+Proxy}!wrap\+Sync@{wrap\+Sync}}
+\index{wrap\+Sync@{wrap\+Sync}!Guzzle\+Http\+::\+Handler\+::\+Proxy@{Guzzle\+Http\+::\+Handler\+::\+Proxy}}
+\subsubsection{\texorpdfstring{wrap\+Sync()}{wrapSync()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Handler\textbackslash{}\+Proxy\+::wrap\+Sync (\begin{DoxyParamCaption}\item[{callable}]{\$default,  }\item[{callable}]{\$sync }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sends synchronous requests to a specific handler while sending all other requests to another handler.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$default} & Handler used for normal responses \\
+\hline
+callable & {\em \$sync} & Handler used for synchronous responses.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+callable Returns the composed handler. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/guzzle/src/\+Handler/Proxy.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{classGuzzleHttp_1_1Exception_1_1RequestException}{}\section{Guzzle\+Http\textbackslash{}Exception\textbackslash{}Request\+Exception Class Reference}
+\label{classGuzzleHttp_1_1Exception_1_1RequestException}\index{Guzzle\+Http\textbackslash{}\+Exception\textbackslash{}\+Request\+Exception@{Guzzle\+Http\textbackslash{}\+Exception\textbackslash{}\+Request\+Exception}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Exception\textbackslash{}Request\+Exception\+:
+% FIG 0
+
+
+Collaboration diagram for Guzzle\+Http\textbackslash{}Exception\textbackslash{}Request\+Exception\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGuzzleHttp_1_1Exception_1_1RequestException_a03abc5465af0644e47d61896baff3b5f}\label{classGuzzleHttp_1_1Exception_1_1RequestException_a03abc5465af0644e47d61896baff3b5f}} 
+{\bfseries \+\_\+\+\_\+construct} ( \$message, \hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$request, \hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface}{Response\+Interface} \$response=null, \textbackslash{}Exception \$previous=null, array \$handler\+Context=\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{classGuzzleHttp_1_1Exception_1_1RequestException_a89c99519ebf7d1fafaa5d6f9ce51d646}{get\+Request} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Exception_1_1RequestException_acfda27bcc9617935534f76b320293846}{get\+Response} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Exception_1_1RequestException_a763f6055c3776ccfdedd1078d7a6ab1b}{has\+Response} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Exception_1_1RequestException_a8cf15dfc490ea772e5ec1fc13209674d}{get\+Handler\+Context} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGuzzleHttp_1_1Exception_1_1RequestException_a8a655eb5c687e8cd40669cca7f69a376}{wrap\+Exception} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$request, \textbackslash{}Exception \$e)
+\item 
+static \hyperlink{classGuzzleHttp_1_1Exception_1_1RequestException_a0be3a3bc293b2453c14f7dcb93f9ad38}{create} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$request, \hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface}{Response\+Interface} \$response=null, \textbackslash{}Exception \$previous=null, array \$ctx=\mbox{[}$\,$\mbox{]})
+\item 
+static \hyperlink{classGuzzleHttp_1_1Exception_1_1RequestException_a6aa968b8fd113ceb2b67896ac08139ab}{get\+Response\+Body\+Summary} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface}{Response\+Interface} \$response)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+H\+T\+TP Request exception 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Exception_1_1RequestException_a0be3a3bc293b2453c14f7dcb93f9ad38}\label{classGuzzleHttp_1_1Exception_1_1RequestException_a0be3a3bc293b2453c14f7dcb93f9ad38}} 
+\index{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}!create@{create}}
+\index{create@{create}!Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Exception\textbackslash{}\+Request\+Exception\+::create (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface}}]{\$request,  }\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface}{Response\+Interface}}]{\$response = {\ttfamily null},  }\item[{\textbackslash{}Exception}]{\$previous = {\ttfamily null},  }\item[{array}]{\$ctx = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Factory method to create a new exception with a normalized error message
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request \\
+\hline
+Response\+Interface & {\em \$response} & Response received \\
+\hline
+\textbackslash{}\+Exception & {\em \$previous} & Previous exception \\
+\hline
+array & {\em \$ctx} & Optional handler context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Exception_1_1RequestException_a8cf15dfc490ea772e5ec1fc13209674d}\label{classGuzzleHttp_1_1Exception_1_1RequestException_a8cf15dfc490ea772e5ec1fc13209674d}} 
+\index{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}!get\+Handler\+Context@{get\+Handler\+Context}}
+\index{get\+Handler\+Context@{get\+Handler\+Context}!Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}}
+\subsubsection{\texorpdfstring{get\+Handler\+Context()}{getHandlerContext()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Exception\textbackslash{}\+Request\+Exception\+::get\+Handler\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get contextual information about the error from the underlying handler.
+
+The contents of this array will vary depending on which handler you are using. It may also be just an empty array. Relying on this data will couple you to a specific handler, but can give more debug information when needed.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Exception_1_1RequestException_a89c99519ebf7d1fafaa5d6f9ce51d646}\label{classGuzzleHttp_1_1Exception_1_1RequestException_a89c99519ebf7d1fafaa5d6f9ce51d646}} 
+\index{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}!get\+Request@{get\+Request}}
+\index{get\+Request@{get\+Request}!Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}}
+\subsubsection{\texorpdfstring{get\+Request()}{getRequest()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Exception\textbackslash{}\+Request\+Exception\+::get\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the request that caused the exception
+
+\begin{DoxyReturn}{Returns}
+Request\+Interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Exception_1_1RequestException_acfda27bcc9617935534f76b320293846}\label{classGuzzleHttp_1_1Exception_1_1RequestException_acfda27bcc9617935534f76b320293846}} 
+\index{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}!get\+Response@{get\+Response}}
+\index{get\+Response@{get\+Response}!Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}}
+\subsubsection{\texorpdfstring{get\+Response()}{getResponse()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Exception\textbackslash{}\+Request\+Exception\+::get\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the associated response
+
+\begin{DoxyReturn}{Returns}
+Response\+Interface$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Exception_1_1RequestException_a6aa968b8fd113ceb2b67896ac08139ab}\label{classGuzzleHttp_1_1Exception_1_1RequestException_a6aa968b8fd113ceb2b67896ac08139ab}} 
+\index{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}!get\+Response\+Body\+Summary@{get\+Response\+Body\+Summary}}
+\index{get\+Response\+Body\+Summary@{get\+Response\+Body\+Summary}!Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}}
+\subsubsection{\texorpdfstring{get\+Response\+Body\+Summary()}{getResponseBodySummary()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Exception\textbackslash{}\+Request\+Exception\+::get\+Response\+Body\+Summary (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface}{Response\+Interface}}]{\$response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a short summary of the response
+
+Will return {\ttfamily null} if the response is not printable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Response\+Interface & {\em \$response} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Exception_1_1RequestException_a763f6055c3776ccfdedd1078d7a6ab1b}\label{classGuzzleHttp_1_1Exception_1_1RequestException_a763f6055c3776ccfdedd1078d7a6ab1b}} 
+\index{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}!has\+Response@{has\+Response}}
+\index{has\+Response@{has\+Response}!Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}}
+\subsubsection{\texorpdfstring{has\+Response()}{hasResponse()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Exception\textbackslash{}\+Request\+Exception\+::has\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if a response was received
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Exception_1_1RequestException_a8a655eb5c687e8cd40669cca7f69a376}\label{classGuzzleHttp_1_1Exception_1_1RequestException_a8a655eb5c687e8cd40669cca7f69a376}} 
+\index{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}!wrap\+Exception@{wrap\+Exception}}
+\index{wrap\+Exception@{wrap\+Exception}!Guzzle\+Http\+::\+Exception\+::\+Request\+Exception@{Guzzle\+Http\+::\+Exception\+::\+Request\+Exception}}
+\subsubsection{\texorpdfstring{wrap\+Exception()}{wrapException()}}
+{\footnotesize\ttfamily static Guzzle\+Http\textbackslash{}\+Exception\textbackslash{}\+Request\+Exception\+::wrap\+Exception (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface}}]{\$request,  }\item[{\textbackslash{}Exception}]{\$e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Wrap non-\/\+Request\+Exceptions with a \hyperlink{classGuzzleHttp_1_1Exception_1_1RequestException}{Request\+Exception}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & \\
+\hline
+\textbackslash{}\+Exception & {\em \$e} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classGuzzleHttp_1_1Exception_1_1RequestException}{Request\+Exception} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/guzzle/src/\+Exception/Request\+Exception.\+php\end{DoxyCompactItemize}

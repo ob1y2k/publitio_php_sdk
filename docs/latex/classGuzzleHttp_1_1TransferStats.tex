@@ -1,0 +1,149 @@
+\hypertarget{classGuzzleHttp_1_1TransferStats}{}\section{Guzzle\+Http\textbackslash{}Transfer\+Stats Class Reference}
+\label{classGuzzleHttp_1_1TransferStats}\index{Guzzle\+Http\textbackslash{}\+Transfer\+Stats@{Guzzle\+Http\textbackslash{}\+Transfer\+Stats}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGuzzleHttp_1_1TransferStats_af38c1ae27cce9d74f99210868441d90e}{\+\_\+\+\_\+construct} (\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface} \$request, \hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface}{Response\+Interface} \$response=null, \$transfer\+Time=null, \$handler\+Error\+Data=null, \$handler\+Stats=\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{classGuzzleHttp_1_1TransferStats_a85d61fa677319c2f8ee452028c159640}{get\+Request} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1TransferStats_a24d462d8c7f1c626b4b0897947ce2acc}{get\+Response} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1TransferStats_a31b5781cf81cbdec28c5747cae624b1e}{has\+Response} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1TransferStats_a4c8e144bc31ee3cf663a1cd0f47b3f19}{get\+Handler\+Error\+Data} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1TransferStats_a7fabc91370f994c5ea8e637c83dde812}{get\+Effective\+Uri} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1TransferStats_adc88f8894bdbaf833c2dd248d9f236b3}{get\+Transfer\+Time} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1TransferStats_a9ea5b0da85d20cab4ca13efa036495d2}{get\+Handler\+Stats} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1TransferStats_af728e7a8e8f3f57889fdf037e1d1b11c}{get\+Handler\+Stat} (\$stat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents data at the point after it was transferred either successfully or after a network error. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1TransferStats_af38c1ae27cce9d74f99210868441d90e}\label{classGuzzleHttp_1_1TransferStats_af38c1ae27cce9d74f99210868441d90e}} 
+\index{Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Transfer\+Stats\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1RequestInterface}{Request\+Interface}}]{\$request,  }\item[{\hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface}{Response\+Interface}}]{\$response = {\ttfamily null},  }\item[{}]{\$transfer\+Time = {\ttfamily null},  }\item[{}]{\$handler\+Error\+Data = {\ttfamily null},  }\item[{}]{\$handler\+Stats = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request that was sent. \\
+\hline
+Response\+Interface & {\em \$response} & Response received (if any) \\
+\hline
+null & {\em \$transfer\+Time} & Total handler transfer time. \\
+\hline
+mixed & {\em \$handler\+Error\+Data} & Handler error data. \\
+\hline
+array & {\em \$handler\+Stats} & Handler specific stats. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1TransferStats_a7fabc91370f994c5ea8e637c83dde812}\label{classGuzzleHttp_1_1TransferStats_a7fabc91370f994c5ea8e637c83dde812}} 
+\index{Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}!get\+Effective\+Uri@{get\+Effective\+Uri}}
+\index{get\+Effective\+Uri@{get\+Effective\+Uri}!Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}}
+\subsubsection{\texorpdfstring{get\+Effective\+Uri()}{getEffectiveUri()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Transfer\+Stats\+::get\+Effective\+Uri (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the effective U\+RI the request was sent to.
+
+\begin{DoxyReturn}{Returns}
+Uri\+Interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1TransferStats_a4c8e144bc31ee3cf663a1cd0f47b3f19}\label{classGuzzleHttp_1_1TransferStats_a4c8e144bc31ee3cf663a1cd0f47b3f19}} 
+\index{Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}!get\+Handler\+Error\+Data@{get\+Handler\+Error\+Data}}
+\index{get\+Handler\+Error\+Data@{get\+Handler\+Error\+Data}!Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}}
+\subsubsection{\texorpdfstring{get\+Handler\+Error\+Data()}{getHandlerErrorData()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Transfer\+Stats\+::get\+Handler\+Error\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets handler specific error data.
+
+This might be an exception, a integer representing an error code, or anything else. Relying on this value assumes that you know what handler you are using.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1TransferStats_af728e7a8e8f3f57889fdf037e1d1b11c}\label{classGuzzleHttp_1_1TransferStats_af728e7a8e8f3f57889fdf037e1d1b11c}} 
+\index{Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}!get\+Handler\+Stat@{get\+Handler\+Stat}}
+\index{get\+Handler\+Stat@{get\+Handler\+Stat}!Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}}
+\subsubsection{\texorpdfstring{get\+Handler\+Stat()}{getHandlerStat()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Transfer\+Stats\+::get\+Handler\+Stat (\begin{DoxyParamCaption}\item[{}]{\$stat }\end{DoxyParamCaption})}
+
+Get a specific handler statistic from the handler by name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$stat} & Handler specific transfer stat to retrieve.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1TransferStats_a9ea5b0da85d20cab4ca13efa036495d2}\label{classGuzzleHttp_1_1TransferStats_a9ea5b0da85d20cab4ca13efa036495d2}} 
+\index{Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}!get\+Handler\+Stats@{get\+Handler\+Stats}}
+\index{get\+Handler\+Stats@{get\+Handler\+Stats}!Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}}
+\subsubsection{\texorpdfstring{get\+Handler\+Stats()}{getHandlerStats()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Transfer\+Stats\+::get\+Handler\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets an array of all of the handler specific transfer data.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1TransferStats_a85d61fa677319c2f8ee452028c159640}\label{classGuzzleHttp_1_1TransferStats_a85d61fa677319c2f8ee452028c159640}} 
+\index{Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}!get\+Request@{get\+Request}}
+\index{get\+Request@{get\+Request}!Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}}
+\subsubsection{\texorpdfstring{get\+Request()}{getRequest()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Transfer\+Stats\+::get\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Request\+Interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1TransferStats_a24d462d8c7f1c626b4b0897947ce2acc}\label{classGuzzleHttp_1_1TransferStats_a24d462d8c7f1c626b4b0897947ce2acc}} 
+\index{Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}!get\+Response@{get\+Response}}
+\index{get\+Response@{get\+Response}!Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}}
+\subsubsection{\texorpdfstring{get\+Response()}{getResponse()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Transfer\+Stats\+::get\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the response that was received (if any).
+
+\begin{DoxyReturn}{Returns}
+Response\+Interface$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1TransferStats_adc88f8894bdbaf833c2dd248d9f236b3}\label{classGuzzleHttp_1_1TransferStats_adc88f8894bdbaf833c2dd248d9f236b3}} 
+\index{Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}!get\+Transfer\+Time@{get\+Transfer\+Time}}
+\index{get\+Transfer\+Time@{get\+Transfer\+Time}!Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}}
+\subsubsection{\texorpdfstring{get\+Transfer\+Time()}{getTransferTime()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Transfer\+Stats\+::get\+Transfer\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the estimated time the request was being transferred by the handler.
+
+\begin{DoxyReturn}{Returns}
+float Time in seconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGuzzleHttp_1_1TransferStats_a31b5781cf81cbdec28c5747cae624b1e}\label{classGuzzleHttp_1_1TransferStats_a31b5781cf81cbdec28c5747cae624b1e}} 
+\index{Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}!has\+Response@{has\+Response}}
+\index{has\+Response@{has\+Response}!Guzzle\+Http\+::\+Transfer\+Stats@{Guzzle\+Http\+::\+Transfer\+Stats}}
+\subsubsection{\texorpdfstring{has\+Response()}{hasResponse()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Transfer\+Stats\+::has\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns true if a response was received.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/guzzle/src/Transfer\+Stats.\+php\end{DoxyCompactItemize}

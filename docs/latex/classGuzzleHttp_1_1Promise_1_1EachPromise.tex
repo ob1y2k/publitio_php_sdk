@@ -1,0 +1,68 @@
+\hypertarget{classGuzzleHttp_1_1Promise_1_1EachPromise}{}\section{Guzzle\+Http\textbackslash{}Promise\textbackslash{}Each\+Promise Class Reference}
+\label{classGuzzleHttp_1_1Promise_1_1EachPromise}\index{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Each\+Promise@{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Each\+Promise}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Promise\textbackslash{}Each\+Promise\+:
+% FIG 0
+
+
+Collaboration diagram for Guzzle\+Http\textbackslash{}Promise\textbackslash{}Each\+Promise\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGuzzleHttp_1_1Promise_1_1EachPromise_a73650da153d2a2ce861ba905f6d564ee}{\+\_\+\+\_\+construct} (\$iterable, array \$config=\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{classGuzzleHttp_1_1Promise_1_1EachPromise_ad1e93c51efc4d3159416f1b4ba47afbe}{promise} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a promise that iterates over many promises and invokes side-\/effect functions in the process. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Promise_1_1EachPromise_a73650da153d2a2ce861ba905f6d564ee}\label{classGuzzleHttp_1_1Promise_1_1EachPromise_a73650da153d2a2ce861ba905f6d564ee}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Each\+Promise@{Guzzle\+Http\+::\+Promise\+::\+Each\+Promise}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Guzzle\+Http\+::\+Promise\+::\+Each\+Promise@{Guzzle\+Http\+::\+Promise\+::\+Each\+Promise}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Each\+Promise\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$iterable,  }\item[{array}]{\$config = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Configuration hash can include the following key value pairs\+:
+
+
+\begin{DoxyItemize}
+\item fulfilled\+: (callable) Invoked when a promise fulfills. The function is invoked with three arguments\+: the fulfillment value, the index position from the iterable list of the promise, and the aggregate promise that manages all of the promises. The aggregate promise may be resolved from within the callback to short-\/circuit the promise.
+\item rejected\+: (callable) Invoked when a promise is rejected. The function is invoked with three arguments\+: the rejection reason, the index position from the iterable list of the promise, and the aggregate promise that manages all of the promises. The aggregate promise may be resolved from within the callback to short-\/circuit the promise.
+\item concurrency\+: (integer) Pass this configuration option to limit the allowed number of outstanding concurrently executing promises, creating a capped pool of promises. There is no limit by default.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$iterable} & Promises or values to iterate. \\
+\hline
+array & {\em \$config} & Configuration options \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Promise_1_1EachPromise_ad1e93c51efc4d3159416f1b4ba47afbe}\label{classGuzzleHttp_1_1Promise_1_1EachPromise_ad1e93c51efc4d3159416f1b4ba47afbe}} 
+\index{Guzzle\+Http\+::\+Promise\+::\+Each\+Promise@{Guzzle\+Http\+::\+Promise\+::\+Each\+Promise}!promise@{promise}}
+\index{promise@{promise}!Guzzle\+Http\+::\+Promise\+::\+Each\+Promise@{Guzzle\+Http\+::\+Promise\+::\+Each\+Promise}}
+\subsubsection{\texorpdfstring{promise()}{promise()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Each\+Promise\+::promise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a promise.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromiseInterface}{Promise\+Interface} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceGuzzleHttp_1_1Promise_1_1PromisorInterface_a228085a17057d886d5486c7c433be879}{Guzzle\+Http\textbackslash{}\+Promise\textbackslash{}\+Promisor\+Interface}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/promises/src/Each\+Promise.\+php\end{DoxyCompactItemize}

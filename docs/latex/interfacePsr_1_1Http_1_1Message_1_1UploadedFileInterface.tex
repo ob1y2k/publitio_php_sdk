@@ -1,0 +1,176 @@
+\hypertarget{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface}{}\section{Psr\textbackslash{}Http\textbackslash{}Message\textbackslash{}Uploaded\+File\+Interface Interface Reference}
+\label{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface}\index{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uploaded\+File\+Interface@{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uploaded\+File\+Interface}}
+
+
+Inheritance diagram for Psr\textbackslash{}Http\textbackslash{}Message\textbackslash{}Uploaded\+File\+Interface\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a342c7814f65c2b256dc525bc3063d662}{get\+Stream} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_aac862c26ca280245c0fb197d0266fdf4}{move\+To} (\$target\+Path)
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a6fabb21af5c4053e1d561018a5d30051}{get\+Size} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a1c08f48bd2c0b20b37dfadf6f2c992e9}{get\+Error} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_ac303b01505ed2b5fb175ff81fbde666d}{get\+Client\+Filename} ()
+\item 
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a5996e9ed494dd17fa7839de56995feee}{get\+Client\+Media\+Type} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Value object representing a file uploaded through an H\+T\+TP request.
+
+Instances of this interface are considered immutable; all methods that might change state M\+U\+ST be implemented such that they retain the internal state of the current instance and return an instance that contains the changed state. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_ac303b01505ed2b5fb175ff81fbde666d}\label{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_ac303b01505ed2b5fb175ff81fbde666d}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}!get\+Client\+Filename@{get\+Client\+Filename}}
+\index{get\+Client\+Filename@{get\+Client\+Filename}!Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}}
+\subsubsection{\texorpdfstring{get\+Client\+Filename()}{getClientFilename()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uploaded\+File\+Interface\+::get\+Client\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the filename sent by the client.
+
+Do not trust the value returned by this method. A client could send a malicious filename with the intention to corrupt or hack your application.
+
+Implementations S\+H\+O\+U\+LD return the value stored in the \char`\"{}name\char`\"{} key of the file in the \$\+\_\+\+F\+I\+L\+ES array.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null The filename sent by the client or null if none was provided. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1UploadedFile_a6565180d087f60e0645d4e29b76529fd}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uploaded\+File}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a5996e9ed494dd17fa7839de56995feee}\label{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a5996e9ed494dd17fa7839de56995feee}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}!get\+Client\+Media\+Type@{get\+Client\+Media\+Type}}
+\index{get\+Client\+Media\+Type@{get\+Client\+Media\+Type}!Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}}
+\subsubsection{\texorpdfstring{get\+Client\+Media\+Type()}{getClientMediaType()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uploaded\+File\+Interface\+::get\+Client\+Media\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the media type sent by the client.
+
+Do not trust the value returned by this method. A client could send a malicious media type with the intention to corrupt or hack your application.
+
+Implementations S\+H\+O\+U\+LD return the value stored in the \char`\"{}type\char`\"{} key of the file in the \$\+\_\+\+F\+I\+L\+ES array.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null The media type sent by the client or null if none was provided. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1UploadedFile_af579a9f2b8a3867da29466cfbad22a4e}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uploaded\+File}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a1c08f48bd2c0b20b37dfadf6f2c992e9}\label{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a1c08f48bd2c0b20b37dfadf6f2c992e9}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}!get\+Error@{get\+Error}}
+\index{get\+Error@{get\+Error}!Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}}
+\subsubsection{\texorpdfstring{get\+Error()}{getError()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uploaded\+File\+Interface\+::get\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the error associated with the uploaded file.
+
+The return value M\+U\+ST be one of P\+HP\textquotesingle{}s U\+P\+L\+O\+A\+D\+\_\+\+E\+R\+R\+\_\+\+X\+XX constants.
+
+If the file was uploaded successfully, this method M\+U\+ST return U\+P\+L\+O\+A\+D\+\_\+\+E\+R\+R\+\_\+\+OK.
+
+Implementations S\+H\+O\+U\+LD return the value stored in the \char`\"{}error\char`\"{} key of the file in the \$\+\_\+\+F\+I\+L\+ES array.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://php.net/manual/en/features.file-upload.errors.php}{\tt http\+://php.\+net/manual/en/features.\+file-\/upload.\+errors.\+php} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+int One of P\+HP\textquotesingle{}s U\+P\+L\+O\+A\+D\+\_\+\+E\+R\+R\+\_\+\+X\+XX constants. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1UploadedFile_abf88819e67fdc112aa01fcd722e784d4}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uploaded\+File}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a6fabb21af5c4053e1d561018a5d30051}\label{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a6fabb21af5c4053e1d561018a5d30051}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uploaded\+File\+Interface\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the file size.
+
+Implementations S\+H\+O\+U\+LD return the value stored in the \char`\"{}size\char`\"{} key of the file in the \$\+\_\+\+F\+I\+L\+ES array if available, as P\+HP calculates this based on the actual size transmitted.
+
+\begin{DoxyReturn}{Returns}
+int$\vert$null The file size in bytes or null if unknown. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1UploadedFile_ac21d09bd109893eb961d927e96693079}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uploaded\+File}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a342c7814f65c2b256dc525bc3063d662}\label{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a342c7814f65c2b256dc525bc3063d662}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}!get\+Stream@{get\+Stream}}
+\index{get\+Stream@{get\+Stream}!Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}}
+\subsubsection{\texorpdfstring{get\+Stream()}{getStream()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uploaded\+File\+Interface\+::get\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve a stream representing the uploaded file.
+
+This method M\+U\+ST return a \hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface}{Stream\+Interface} instance, representing the uploaded file. The purpose of this method is to allow utilizing native P\+HP stream functionality to manipulate the file upload, such as stream\+\_\+copy\+\_\+to\+\_\+stream() (though the result will need to be decorated in a native P\+HP stream wrapper to work with such functions).
+
+If the \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_aac862c26ca280245c0fb197d0266fdf4}{move\+To()} method has been called previously, this method M\+U\+ST raise an exception.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{interfacePsr_1_1Http_1_1Message_1_1StreamInterface}{Stream\+Interface} Stream representation of the uploaded file. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1UploadedFile_a4626779cebe28308009f37701ad0d982}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uploaded\+File}.
+
+\mbox{\Hypertarget{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_aac862c26ca280245c0fb197d0266fdf4}\label{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_aac862c26ca280245c0fb197d0266fdf4}} 
+\index{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}!move\+To@{move\+To}}
+\index{move\+To@{move\+To}!Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface@{Psr\+::\+Http\+::\+Message\+::\+Uploaded\+File\+Interface}}
+\subsubsection{\texorpdfstring{move\+To()}{moveTo()}}
+{\footnotesize\ttfamily Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Uploaded\+File\+Interface\+::move\+To (\begin{DoxyParamCaption}\item[{}]{\$target\+Path }\end{DoxyParamCaption})}
+
+Move the uploaded file to a new location.
+
+Use this method as an alternative to move\+\_\+uploaded\+\_\+file(). This method is guaranteed to work in both S\+A\+PI and non-\/\+S\+A\+PI environments. Implementations must determine which environment they are in, and use the appropriate method (move\+\_\+uploaded\+\_\+file(), rename(), or a stream operation) to perform the operation.
+
+\$target\+Path may be an absolute path, or a relative path. If it is a relative path, resolution should be the same as used by P\+HP\textquotesingle{}s rename() function.
+
+The original file or stream M\+U\+ST be removed on completion.
+
+If this method is called more than once, any subsequent calls M\+U\+ST raise an exception.
+
+When used in an S\+A\+PI environment where \$\+\_\+\+F\+I\+L\+ES is populated, when writing files via \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_aac862c26ca280245c0fb197d0266fdf4}{move\+To()}, is\+\_\+uploaded\+\_\+file() and move\+\_\+uploaded\+\_\+file() S\+H\+O\+U\+LD be used to ensure permissions and upload status are verified correctly.
+
+If you wish to move to a stream, use \hyperlink{interfacePsr_1_1Http_1_1Message_1_1UploadedFileInterface_a342c7814f65c2b256dc525bc3063d662}{get\+Stream()}, as S\+A\+PI operations cannot guarantee writing to stream destinations.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://php.net/is_uploaded_file}{\tt http\+://php.\+net/is\+\_\+uploaded\+\_\+file} 
+
+\href{http://php.net/move_uploaded_file}{\tt http\+://php.\+net/move\+\_\+uploaded\+\_\+file} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$target\+Path} & Path to which to move the uploaded file. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classGuzzleHttp_1_1Psr7_1_1UploadedFile_a5279b64228742deb9e0ba074df4d0d8e}{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Uploaded\+File}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/psr/http-\/message/src/Uploaded\+File\+Interface.\+php\end{DoxyCompactItemize}

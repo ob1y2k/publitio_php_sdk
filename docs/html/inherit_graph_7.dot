@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="GuzzleHttp\\Handler\l\\CurlFactoryInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceGuzzleHttp_1_1Handler_1_1CurlFactoryInterface.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="GuzzleHttp\\Handler\l\\CurlFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGuzzleHttp_1_1Handler_1_1CurlFactory.html"];
+}

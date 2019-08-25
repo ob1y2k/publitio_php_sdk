@@ -1,0 +1,101 @@
+\hypertarget{classGuzzleHttp_1_1Psr7_1_1Response}{}\section{Guzzle\+Http\textbackslash{}Psr7\textbackslash{}Response Class Reference}
+\label{classGuzzleHttp_1_1Psr7_1_1Response}\index{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Response@{Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Response}}
+
+
+Inheritance diagram for Guzzle\+Http\textbackslash{}Psr7\textbackslash{}Response\+:
+% FIG 0
+
+
+Collaboration diagram for Guzzle\+Http\textbackslash{}Psr7\textbackslash{}Response\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1Response_a79ee107513483b3de6e41badc7c7fea8}{\+\_\+\+\_\+construct} ( \$status=200, array \$headers=\mbox{[}$\,$\mbox{]}, \$body=null, \$version=\textquotesingle{}1.\+1\textquotesingle{}, \$reason=null)
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1Response_af62648e0dfc88b9100d82c188337882a}{get\+Status\+Code} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1Response_a7a7ba26406b18f2353cef4a639fe4be6}{get\+Reason\+Phrase} ()
+\item 
+\hyperlink{classGuzzleHttp_1_1Psr7_1_1Response_ac436d34fd685d7a4ddfe5931ecd58538}{with\+Status} (\$code, \$reason\+Phrase=\textquotesingle{}\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+S\+R-\/7 response implementation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1Response_a79ee107513483b3de6e41badc7c7fea8}\label{classGuzzleHttp_1_1Psr7_1_1Response_a79ee107513483b3de6e41badc7c7fea8}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Response@{Guzzle\+Http\+::\+Psr7\+::\+Response}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Guzzle\+Http\+::\+Psr7\+::\+Response@{Guzzle\+Http\+::\+Psr7\+::\+Response}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Response\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$status = {\ttfamily 200},  }\item[{array}]{\$headers = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$body = {\ttfamily null},  }\item[{}]{\$version = {\ttfamily \textquotesingle{}1.1\textquotesingle{}},  }\item[{}]{\$reason = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$status} & Status code \\
+\hline
+array & {\em \$headers} & \hyperlink{classGuzzleHttp_1_1Psr7_1_1Response}{Response} headers \\
+\hline
+string | null | resource | Stream\+Interface & {\em \$body} & \hyperlink{classGuzzleHttp_1_1Psr7_1_1Response}{Response} body \\
+\hline
+string & {\em \$version} & Protocol version \\
+\hline
+string | null & {\em \$reason} & Reason phrase (when empty a default will be used based on the status code) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1Response_a7a7ba26406b18f2353cef4a639fe4be6}\label{classGuzzleHttp_1_1Psr7_1_1Response_a7a7ba26406b18f2353cef4a639fe4be6}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Response@{Guzzle\+Http\+::\+Psr7\+::\+Response}!get\+Reason\+Phrase@{get\+Reason\+Phrase}}
+\index{get\+Reason\+Phrase@{get\+Reason\+Phrase}!Guzzle\+Http\+::\+Psr7\+::\+Response@{Guzzle\+Http\+::\+Psr7\+::\+Response}}
+\subsubsection{\texorpdfstring{get\+Reason\+Phrase()}{getReasonPhrase()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Response\+::get\+Reason\+Phrase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the response reason phrase associated with the status code.
+
+Because a reason phrase is not a required element in a response status line, the reason phrase value M\+AY be null. Implementations M\+AY choose to return the default R\+FC 7231 recommended reason phrase (or those listed in the I\+A\+NA H\+T\+TP Status Code Registry) for the response\textquotesingle{}s status code.
+
+\hyperlink{}{\href{http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml}{\tt http\+://www.\+iana.\+org/assignments/http-\/status-\/codes/http-\/status-\/codes.\+xhtml}  string Reason phrase; must return an empty string if none present. }
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface_a98ae6592ab231946a767d9b422142a26}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1Response_af62648e0dfc88b9100d82c188337882a}\label{classGuzzleHttp_1_1Psr7_1_1Response_af62648e0dfc88b9100d82c188337882a}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Response@{Guzzle\+Http\+::\+Psr7\+::\+Response}!get\+Status\+Code@{get\+Status\+Code}}
+\index{get\+Status\+Code@{get\+Status\+Code}!Guzzle\+Http\+::\+Psr7\+::\+Response@{Guzzle\+Http\+::\+Psr7\+::\+Response}}
+\subsubsection{\texorpdfstring{get\+Status\+Code()}{getStatusCode()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Response\+::get\+Status\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the response status code.
+
+The status code is a 3-\/digit integer result code of the server\textquotesingle{}s attempt to understand and satisfy the request.
+
+\begin{DoxyReturn}{Returns}
+int Status code. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface_a599198ec3cc30dc374da26e504c65868}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response\+Interface}.
+
+\mbox{\Hypertarget{classGuzzleHttp_1_1Psr7_1_1Response_ac436d34fd685d7a4ddfe5931ecd58538}\label{classGuzzleHttp_1_1Psr7_1_1Response_ac436d34fd685d7a4ddfe5931ecd58538}} 
+\index{Guzzle\+Http\+::\+Psr7\+::\+Response@{Guzzle\+Http\+::\+Psr7\+::\+Response}!with\+Status@{with\+Status}}
+\index{with\+Status@{with\+Status}!Guzzle\+Http\+::\+Psr7\+::\+Response@{Guzzle\+Http\+::\+Psr7\+::\+Response}}
+\subsubsection{\texorpdfstring{with\+Status()}{withStatus()}}
+{\footnotesize\ttfamily Guzzle\+Http\textbackslash{}\+Psr7\textbackslash{}\+Response\+::with\+Status (\begin{DoxyParamCaption}\item[{}]{\$code,  }\item[{}]{\$reason\+Phrase = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Return an instance with the specified status code and, optionally, reason phrase.
+
+If no reason phrase is specified, implementations M\+AY choose to default to the R\+FC 7231 or I\+A\+NA recommended reason phrase for the response\textquotesingle{}s status code.
+
+This method M\+U\+ST be implemented in such a way as to retain the immutability of the message, and M\+U\+ST return an instance that has the updated status and reason phrase.
+
+\hyperlink{}{\href{http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml}{\tt http\+://www.\+iana.\+org/assignments/http-\/status-\/codes/http-\/status-\/codes.\+xhtml}  int \$code The 3-\/digit integer result code to set.  string \$reason\+Phrase The reason phrase to use with the provided status code; if none is provided, implementations M\+AY use the defaults as suggested in the H\+T\+TP specification.  static   For invalid status code arguments. }
+
+Implements \hyperlink{interfacePsr_1_1Http_1_1Message_1_1ResponseInterface_ae79c87a0cd82e000a5e1bb4dbee739da}{Psr\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response\+Interface}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/guzzlehttp/psr7/src/Response.\+php\end{DoxyCompactItemize}
