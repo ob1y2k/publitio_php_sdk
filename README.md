@@ -23,6 +23,12 @@ Install the Publitio SDK:
 php composer.phar require publitio/publitio
 ```
 
+If you have already installed Composer globally, use:
+
+```bash
+composer require publitio/publitio
+```
+
 After installing, require the Composer autoloader:
 
 ```php
@@ -48,7 +54,7 @@ To Make an API call, use the `call` method:
 $response = $publitio->call($call_url, $method, $args);
 ```
 
-For a list of avaliable calls, see [the docs](https://publit.io/docs).
+For a list of available calls, see [the docs](https://publit.io/docs).
 
 - $call_url is the API call URL, for example '/files/list'.
 
