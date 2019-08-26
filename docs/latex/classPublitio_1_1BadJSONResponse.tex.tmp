@@ -1,0 +1,31 @@
+\hypertarget{classPublitio_1_1BadJSONResponse}{}\section{Publitio\textbackslash{}Bad\+J\+S\+O\+N\+Response Class Reference}
+\label{classPublitio_1_1BadJSONResponse}\index{Publitio\textbackslash{}\+Bad\+J\+S\+O\+N\+Response@{Publitio\textbackslash{}\+Bad\+J\+S\+O\+N\+Response}}
+
+
+This exception is thrown when the server responds with incorrectly formatted J\+S\+ON.  
+
+
+
+
+Inheritance diagram for Publitio\textbackslash{}Bad\+J\+S\+O\+N\+Response\+:
+% FIG 0
+
+
+Collaboration diagram for Publitio\textbackslash{}Bad\+J\+S\+O\+N\+Response\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPublitio_1_1BadJSONResponse_a3c06c9c72a4782ae8b1bf51e045433a1}\label{classPublitio_1_1BadJSONResponse_a3c06c9c72a4782ae8b1bf51e045433a1}} 
+{\bfseries \+\_\+\+\_\+construct} (\$body, \$call\+\_\+url)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This exception is thrown when the server responds with incorrectly formatted J\+S\+ON. 
+
+This also happens then the server responds with something that isn\textquotesingle{}t J\+S\+ON at all, such as H\+T\+ML code. This can happen when you use a nonexistent A\+PI endpoint (for example, a typo -\/ \textquotesingle{}flies/list\textquotesingle{} instead of \textquotesingle{}files/list\textquotesingle{}). This may also happen if an internal server error occurs. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Bad\+J\+S\+O\+N\+Response.\+php\end{DoxyCompactItemize}

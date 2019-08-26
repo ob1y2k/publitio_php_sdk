@@ -1,0 +1,132 @@
+\hypertarget{classPublitio_1_1API}{}\section{Publitio\textbackslash{}A\+PI Class Reference}
+\label{classPublitio_1_1API}\index{Publitio\textbackslash{}\+A\+PI@{Publitio\textbackslash{}\+A\+PI}}
+
+
+\hyperlink{classPublitio_1_1API}{A\+PI} presents the main interface to the Publitio R\+E\+S\+Tful A\+PI.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPublitio_1_1API_af80d6037cdea9ea685abb5db6ed68b3c}{\+\_\+\+\_\+construct} (\$key, \$secret)
+\item 
+\hyperlink{classPublitio_1_1API_ae58db8a70b7f72d7b16aa1dea4f9a292}{call} (\$call\+\_\+url, \$method=\textquotesingle{}G\+ET\textquotesingle{}, \$args=array())
+\item 
+\hyperlink{classPublitio_1_1API_a05a6ab443cb16c2ef3be2a3f2c434d7b}{upload\+File} (\$file, \$action=\textquotesingle{}file\textquotesingle{}, \$args=array())
+\item 
+\hyperlink{classPublitio_1_1API_ab5b9b82b9b26449fcbbc023cab0c389a}{upload\+Remote\+File} (\$remote\+\_\+url, \$action=\textquotesingle{}file\textquotesingle{}, \$args=array())
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPublitio_1_1API_aab29941f3090b73c32c40a07adfb204a}\label{classPublitio_1_1API_aab29941f3090b73c32c40a07adfb204a}} 
+static {\bfseries \$\+V\+E\+R\+S\+I\+ON} = \textquotesingle{}2.\+0.\+0\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classPublitio_1_1API}{A\+PI} presents the main interface to the Publitio R\+E\+S\+Tful A\+PI. 
+
+You can find more documentation about Publitio at \href{https://publit.io/docs}{\tt https\+://publit.\+io/docs}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPublitio_1_1API_af80d6037cdea9ea685abb5db6ed68b3c}\label{classPublitio_1_1API_af80d6037cdea9ea685abb5db6ed68b3c}} 
+\index{Publitio\+::\+A\+PI@{Publitio\+::\+A\+PI}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Publitio\+::\+A\+PI@{Publitio\+::\+A\+PI}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Publitio\textbackslash{}\+A\+P\+I\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$secret }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Your A\+PI key. You can find your A\+PI key on your Publitio dashboard at \href{https://publit.io/dashboard}{\tt https\+://publit.\+io/dashboard}. \\
+\hline
+string & {\em \$secret} & Your A\+PI secret. You can find your A\+PI secret on your Publitio dashboard at \href{https://publit.io/dashboard}{\tt https\+://publit.\+io/dashboard}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPublitio_1_1API_ae58db8a70b7f72d7b16aa1dea4f9a292}\label{classPublitio_1_1API_ae58db8a70b7f72d7b16aa1dea4f9a292}} 
+\index{Publitio\+::\+A\+PI@{Publitio\+::\+A\+PI}!call@{call}}
+\index{call@{call}!Publitio\+::\+A\+PI@{Publitio\+::\+A\+PI}}
+\subsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily Publitio\textbackslash{}\+A\+P\+I\+::call (\begin{DoxyParamCaption}\item[{}]{\$call\+\_\+url,  }\item[{}]{\$method = {\ttfamily \textquotesingle{}GET\textquotesingle{}},  }\item[{}]{\$args = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Make an A\+PI call. For a list of avaliable calls, see \href{https://publit.io/docs}{\tt https\+://publit.\+io/docs}. Use this method when you aren\textquotesingle{}t going to be uploading any files with the call. If you wish to upload a file, use the {\ttfamily upload\+File} or {\ttfamily upload\+Remote\+File} methods.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$call\+\_\+url} & The A\+PI call endpoint, for example \textquotesingle{}/files/list\textquotesingle{}. \\
+\hline
+string & {\em \$method} & The H\+T\+TP method, for example \textquotesingle{}G\+ET\textquotesingle{} or \textquotesingle{}D\+E\+L\+E\+TE\textquotesingle{}. Which of these you need depends on what kind of call you are making. The method for each A\+PI U\+RL is documented at \href{https://publit.io/docs}{\tt https\+://publit.\+io/docs}. \\
+\hline
+array & {\em \$args} & The U\+RL query parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object The response J\+S\+ON parsed using {\ttfamily json\+\_\+decode}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classPublitio_1_1BadJSONResponse}{Bad\+J\+S\+O\+N\+Response}} & when the server returns an invalid J\+S\+ON reponse. Note\+: if the server is returning an invalid J\+S\+ON response it is likely that {\ttfamily \$call\+\_\+url} is invalid, or perhaps there is an internal server error. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classPublitio_1_1API_a05a6ab443cb16c2ef3be2a3f2c434d7b}\label{classPublitio_1_1API_a05a6ab443cb16c2ef3be2a3f2c434d7b}} 
+\index{Publitio\+::\+A\+PI@{Publitio\+::\+A\+PI}!upload\+File@{upload\+File}}
+\index{upload\+File@{upload\+File}!Publitio\+::\+A\+PI@{Publitio\+::\+A\+PI}}
+\subsubsection{\texorpdfstring{upload\+File()}{uploadFile()}}
+{\footnotesize\ttfamily Publitio\textbackslash{}\+A\+P\+I\+::upload\+File (\begin{DoxyParamCaption}\item[{}]{\$file,  }\item[{}]{\$action = {\ttfamily \textquotesingle{}file\textquotesingle{}},  }\item[{}]{\$args = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Upload a file. Use this method when uploading local files from memory. If you wish to upload a file using a remote U\+RL, use {\ttfamily upload\+Remote\+File}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$file} & Pass a string to upload the contents of the string, pass an {\ttfamily fopen} resource to upload the contents of a P\+HP stream, or pass a {\ttfamily Psr\textbackslash{}Http\textbackslash{}Message\textbackslash{}Stream\+Interface} to upload the contents of a P\+S\+R-\/7 stream. \\
+\hline
+string & {\em \$action} & Can be \textquotesingle{}file\textquotesingle{} or \textquotesingle{}watermark\textquotesingle{}. If {\ttfamily \$action} is \textquotesingle{}file\textquotesingle{}, this method will upload a file to the Publitio server. If {\ttfamily \$action} is \textquotesingle{}watermark\textquotesingle{}, this method will upload a watermark to the server. If {\ttfamily \$action} is anything else, an {\ttfamily Exception} will be thrown. \\
+\hline
+array & {\em \$args} & The U\+RL query parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object The response J\+S\+ON parsed using {\ttfamily json\+\_\+decode}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & when {\ttfamily \$action} is invalid. \\
+\hline
+{\em \hyperlink{classPublitio_1_1BadJSONResponse}{Bad\+J\+S\+O\+N\+Response}} & when the server responds with invalid J\+S\+ON. This might be due to an internal server error. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classPublitio_1_1API_ab5b9b82b9b26449fcbbc023cab0c389a}\label{classPublitio_1_1API_ab5b9b82b9b26449fcbbc023cab0c389a}} 
+\index{Publitio\+::\+A\+PI@{Publitio\+::\+A\+PI}!upload\+Remote\+File@{upload\+Remote\+File}}
+\index{upload\+Remote\+File@{upload\+Remote\+File}!Publitio\+::\+A\+PI@{Publitio\+::\+A\+PI}}
+\subsubsection{\texorpdfstring{upload\+Remote\+File()}{uploadRemoteFile()}}
+{\footnotesize\ttfamily Publitio\textbackslash{}\+A\+P\+I\+::upload\+Remote\+File (\begin{DoxyParamCaption}\item[{}]{\$remote\+\_\+url,  }\item[{}]{\$action = {\ttfamily \textquotesingle{}file\textquotesingle{}},  }\item[{}]{\$args = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Upload the file at U\+RL {\ttfamily \$remote\+\_\+url} to the server. If you need to upload a file from memory instead, use {\ttfamily upload\+File}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$remote\+\_\+url} & The U\+RL of file to upload. \\
+\hline
+string & {\em \$action} & Can be \textquotesingle{}file\textquotesingle{} or \textquotesingle{}watermark\textquotesingle{}. If {\ttfamily \$action} is \textquotesingle{}file\textquotesingle{}, this method will upload a file to the Publitio server. If {\ttfamily \$action} is \textquotesingle{}watermark\textquotesingle{}, this method will upload a watermark to the server. If {\ttfamily \$action} is anything else, an {\ttfamily Exception} will be thrown. \\
+\hline
+array & {\em \$args} & The U\+RL query parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object The response J\+S\+ON parsed using {\ttfamily json\+\_\+decode}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & when {\ttfamily \$action} is invalid. \\
+\hline
+{\em \hyperlink{classPublitio_1_1BadJSONResponse}{Bad\+J\+S\+O\+N\+Response}} & when the server responds with invalid J\+S\+ON. This might be due to an internal server error. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/A\+P\+I.\+php\end{DoxyCompactItemize}
